@@ -1,0 +1,303 @@
+:root {
+    --bgColor : rgba(24, 47, 80, 1);
+}
+
+body {
+    height : 1500vh;
+    background : black;
+    overflow-y : hidden;
+    overflow-x : hidden;
+}
+
+/*intro animation*/
+
+#intro {
+    height : 100vh;
+    width : 100vw;
+    position : absolute;
+    top : 0;
+    left : 0;
+    overflow : hidden;
+    z-index : 1;
+}
+
+#intro div:nth-child(1) {
+    position : absolute;
+    top : 0;
+    background : rgb(53, 107, 199);
+    height : 50vh;
+    width : 100vw;
+    transform : translateX(-100%);
+    transition : all 1s ease-in-out;
+    animation : topHalf 2s ease-in-out;
+}
+
+#intro div:nth-child(2) {
+    position : absolute;
+    bottom : 0;
+    background : rgb(10, 29, 91);
+    height : 50vh;
+    width : 100vw;
+    transform : translateX(100%);
+    transition : all 1s ease-in-out;
+    animation : bottomHalf 2s ease-in-out;
+}
+
+#topPage video {
+    position : fixed;
+    top : 0;
+    left : 0;
+    height : 100vh;
+    width : 100vw;
+    object-fit : fill;
+}
+
+#topPage #topVideo {
+    opacity : 0;
+}
+
+#topPage #bikeVideo {
+    display : none;
+}
+
+#topPage #transitVideo {
+    display : none;
+}
+
+#topPage #overlay {
+    position : fixed;
+    top : 0;
+    left : 0;
+    height : 100vh;
+    width : 100vw;
+    background : rgba(0, 0, 0, 0.3);
+}
+
+#header {
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+    overflow : hidden;
+}
+#header h1 {
+    margin : 0;
+    font-style : italic;
+    font-size : 10rem;
+    font-weight : bold;
+    animation : textPopIn 1.5s ease-in-out;
+}
+
+#pages {
+    position : absolute;
+    top : 100vh;
+    left : 0;
+    margin : 0;
+    display : flex;
+    flex-direction : column;
+}
+/*page1*/
+
+#page1 {
+    padding-top : 10vh;
+    height : 360vh;
+    width : 100vw;
+    background : var(--bgColor);
+}
+
+#page1 h1 {
+    position : sticky;
+    background : var(--bgColor);
+    top : 0;
+    font-size : 16vh;
+    font-weight : bold;
+    margin-left : 3rem;
+}
+
+#page1Text {
+    margin : 50vh 0 0 3rem;
+    display : flex;
+    flex-direction : column;
+    gap : 50vh;
+}
+
+#page1 p {
+    font-size : 5vh;
+    width : 50%;
+}
+
+#page1 #trafficImg {
+    position : fixed;
+    top : 50vh;
+    left : 100vw;
+    transform : translateY(-25%);
+    margin : 0;
+    height : 60vh;
+    width : 60vh;
+    border-radius : 50%;
+    background : url('https://cdn.mos.cms.futurecdn.net/4taDtM9qFJ6yTmbZQDmyNV.jpg');
+    transition : transform 0.8s ease-in-out, opacity 0.4s ease-in-out;
+    box-shadow : 0 0 5px 5px white inset;
+}
+
+/*page2*/ 
+
+#page2 {
+    padding-top : 50vh;
+    height : 120vh;
+    width : 100vw;
+    background : black;
+    transition : all 0.8s ease-in-out;
+}
+
+#page2 h1 {
+    font-size : 5rem;
+    margin-left : 3rem;
+}
+#page2 img {
+    width : 40vw;
+}
+#page2 #page2Slide {
+    display : flex;
+    flex-direction : row;
+    gap : 3rem;
+    margin-left : 3rem;
+}
+
+#page2Text{
+    display : flex;
+    flex-direction : column;
+}
+
+#page2 p {
+    font-size : 2rem;
+    width : 50VW;
+}
+
+/*page3 - Horizontal Bike*/
+
+#page3 {
+    height : calc(200vw + 100vh);
+    width : 300vw;
+}
+
+#bikeHorizontal {
+    position : sticky;
+    top : 0;
+    display : flex;
+    height : 100vh;
+    width : 300vw;
+}
+
+#bikeHorizontal .bike {
+    height : 100vh;
+    width : 100vw;
+}
+
+#bikeHorizontal div:nth-child(even) {
+    background : rgb(117, 156, 212);
+    color : rgb(73, 101, 192);
+}
+
+#bikeHorizontal div:nth-child(even) h1 {
+    position : absolute;
+    left : 110vw;
+    margin : 0;
+    font-family : Arial, Helvetica, sans-serif;
+    font-size : 18rem;
+    font-weight : bold;
+    text-shadow : 125px 160px rgb(41, 85, 167), 250px 320px rgb(61, 12, 97);
+}
+
+/*page4*/
+
+#page4 {
+    background : var(--bgColor);
+    height : 110vh;
+    width : 100vw;
+    display : flex;
+    align-items : center;
+}
+
+#page4 h1 {
+    font-size : 15rem;
+    margin : 0 2rem 0 0;
+    text-align : right;
+}
+
+/*page5*/
+
+#page5 {
+    height : 250vh;
+    width : 100vw;
+}
+
+#page5 p {
+    position : sticky;
+    top : 50vh;
+    margin-top : 50vh;
+    margin-left : 50vw;
+    transform : translateX(-50%) translateY(-50%);
+    font-size : 2.5rem;
+    width : 65vw;
+    text-align : center;
+}
+
+/*footer*/
+
+footer {
+    position : absolute;
+    bottom : 0;
+}
+
+/*animations*/
+
+@keyframes topHalf {
+    0%{
+        height : 0;
+        transform : translateX(0);
+    }
+    40% {
+        height : 50vh;
+        transform : translateX(0);
+    }
+    45% {
+        height : 50vh;
+        transform : translateX(0);
+    }
+    100% {
+        height : 50vh;
+        transform : translateX(-100%);
+    }
+}
+
+@keyframes bottomHalf {
+    0%{
+        height : 0;
+        transform : translateX(0);
+    }
+    40% {
+        height : 50vh;
+        transform : translateX(0);
+    }
+    45% {
+        height : 50vh;
+        transform : translateX(0);
+    }
+    100% {
+        height : 50vh;
+        transform : translateX(100%);
+    }
+}
+
+@keyframes textPopIn {
+    0% {
+        transform : translateX(-110%);
+    }
+    33% {
+        transform : translateX(-110%);
+    }
+    100% {
+        transform : translateX(0);
+    }
+}

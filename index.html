@@ -1,0 +1,84 @@
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityMotion</title>
+    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="stylesheet" href="CSS/menu.css">
+    <link rel = 'icon' href = 'IMAGES/logo.png'>
+</head>
+<body>
+    <div id = 'background'>
+        <video id = 'backgroundVideo' muted autoplay loop>
+            <source src = 'VIDEOS/topViewTraffic.mp4'>
+        </video>
+        <div id = 'postVideo'></div>
+    </div>
+
+    <div id = 'overlay'></div>
+    <!-- <div id = 'cover'></div> -->
+
+    <div id = 'menuBackground'></div>
+    <div id = 'menu'>
+        <div id = 'menuBar'>
+            <a id = 'title' href = ''>
+                <img id = 'logo' src="IMAGES/logo.png" alt="">
+                <div>
+                    <h1 id = 'titleText'>CityMotion</h1>
+                </div>
+            </a>
+            <div id = 'empty'></div>
+        </div>
+        <div id = 'menuBtn' class = ''>CityMotion</div>
+        <div id = 'menuBtn2' class = ''>
+            <a class = 'active'>Home</a>
+            <a href = 'HTML/road.html'>Road Infrastructure</a>
+            <a href = 'HTML/commute.html'>Difficulties of Commuting</a>
+            <a href = 'HTML/cities.html'>Cities Around the World</a>
+            <a href = 'contribute.html' style = "text-decoration : line-through; pointer-events : none;">How to Contribute (WIP)</a>
+        </div>
+    </div>
+
+    <div id = 'horizontal'>
+        <div id = 'page1' class = 'page'>
+            <div id = 'introBox'>
+                <h2>Reinventing Cities</h2>
+                <p>Today, the country of America suffers from heavy carcentrism, leading to poor city infrastructure. The cities of America are designed for the car, built around the car, and bulldozed for the car.</p>
+                <button id = 'homeBtn'>LEARN MORE</button>
+            </div>
+        </div>
+        <div id = 'page2' class = 'page'>
+            <div class = 'text'>
+                <h2>The Beginning</h2>
+                <p>With the end of World War 2 came a huge change in America’s infrastructure. There was a heavy focus on suburbanization, which led to problems with traffic and road safety. The passenger rail system was made redundant due to the expansions of interstate highways and airlines, and the use of automobiles has seen an explosive growth.</p>
+            </div>
+            <div class = 'block'>
+                <div id = 'card'>
+                    
+                </div>
+                <div id = 'WW2'>
+                    <div></div>
+                </div>
+            </div>
+        
+        </div>
+        <div id = 'page3' class = 'page'>
+            <div class = 'text'>
+                <img src="/IMAGES/building.png" alt="">
+                <p>Cities today have many issues regarding the efficiency of travel and the safety of pedestrians and drivers alike. For the future economic growth and development of America, a change is needed in the current infrastructure. This can only happen if citizens group together and opt for change.</p>
+            </div>
+        </div>
+        <div id = 'page4' class = 'page'>
+            <div class = 'text'>
+                <h2>Explore</h2>
+                <p>Click the button to learn more about the road infrastructure in the US, the harmful of stroads, and what can be done to make traveling safer and faster for everyone.</p>
+                <div id = "btn"><button onclick = "roads()">Roads</button></div>
+            </div>
+        </div>
+    </div>
+
+<script src = "JAVASCRIPT/home.js"></script>
+<script src = 'JAVASCRIPT/menu.js'></script>
+</body>
+</html>
+
