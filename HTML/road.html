@@ -1,0 +1,113 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityMotion</title>
+    <link rel="stylesheet" href="/CSS/menu.css">
+    <link rel="stylesheet" href="/CSS/road.css">
+    <link rel="icon" href="/IMAGES/logo.png">
+</head>
+<body>
+    <div id = 'intro'>
+        <h2>
+            <p class = 'introP'>Road designs in America are often dangerous and leads to more accidents and traffic congestion. </p>
+        </h2>
+        <p id = 'clickPrompt'>-click anywhere to continue-</p>
+    </div>
+
+    <div id = 'menuBackground'></div>
+    <div id = 'menu'>
+        <div id = 'menuBar'>
+            <a id = 'title' href = '/index.html'>
+                <img id = 'logo' src="/IMAGES/logo.png" alt="">
+                <div>
+                    <h1 id = 'titleText'>CityMotion</h1>
+                </div>
+            </a>
+            <div id = 'empty'></div>
+        </div>
+        <div id = 'menuBtn' class = 'reveal'>CityMotion</div>
+        <div id = 'menuBtn2' class = ''>
+            <a href = '/index.html'>Home</a>
+            <a class = 'active'>Road Infrastructure</a>
+            <a href = 'commute.html'>Difficulties of Commuting</a>
+            <a href = 'cities.html'>Cities Around the World</a>
+            <a href = 'contribute.html'>How to Contribute</a>
+        </div>
+    </div>
+
+    <div id = 'pages'>
+        <div id = 'page1' class = 'page'>
+            <div id = 'pageText1'><p>More than</p><h2 data-value = '40,000+'>000000</h2> people in the US die from car accidents every year.</div>
+        </div>
+        <div id = 'page2'>
+            <div id = 'page2Stick' class = 'page'>
+                <div id = 'roadText'>
+                    <h2>ROADS</h2>
+                    <div id = 'roadLine'></div>
+                    <p id = 'roadP'>The purpose of roads is to transport people and goods fast and efficiently. Roads are high-speed thoroughfares, which are connections between 2 places.</p>
+                </div>
+                <div id = 'roadImage'></div>
+            </div>
+        </div>
+        <div id = 'page3'>
+            <div id = 'page3Stick' class = 'page'>
+                <div id = 'streetText'>
+                    <h2>STREETS</h2>
+                    <div id = 'streetLine'></div>
+                    <p id = 'streetP'>While roads serve as routes or pathways between destinations with a greater distance, streets serve as local routes for vehicles and pedestrians.</p>
+                </div>
+                <div id = 'streets'>
+                    <video id = 'streetsVideo' muted autoplay loop>
+                        <source src = '/VIDEOS/streets.mp4'>
+                    </video>
+                </div>                
+            </div>
+        </div>
+        <div id = 'page4' class = 'page'>
+            <h1>SUMMARY</h1>
+            <div id = 'pros' class = 'page'>
+                <div id = 'left'>
+                    <img src="/IMAGES/roadLogo.png" alt="">
+                    <h2>FACILITATES MOVEMENT</h2>
+                    <p>Roads and streets provide pathways for vehicles, pedestrians, cyclists, and other modes of transportation to move from one location to another.  Well-maintained road infrastructure ensures timely access to critical services during emergencies.</p>
+                </div>
+                <div id = 'middle'>
+                    <img src="/IMAGES/logo.png" alt="">
+                    <h2>SAFETY & ACCESSIBILITY</h2>
+                    <p>Well-designed roads and streets prioritize safety for all users, including pedestrians, cyclists, motorists, and public transportation passengers.</p>
+                </div>
+                <div id = 'right'>
+                    <img src="/IMAGES/dollarSign.png" alt="">
+                    <h2>URBAN DEVELOPMENT</h2>
+                    <p>Street designs influence development of neighborhoods, commercial districts, and public spaces. Roads connecting cities and regions promote economic growth, trade, and tourism, contributing to regional growth and prosperity. </p>
+                </div>
+            </div>
+            <div class = 'curve'></div>
+        </div>
+        <div id = 'page5' class = 'page'>
+            <div id = 'stroad1'>
+                <h1>STROADS</h1>
+                <!--p>While streets and roads together make up a coherent infrastructure, here's where stroads come into play. A stroad is a term for a hybrid of a street and a road.</p-->
+                <iframe src="https://www.youtube.com/embed/OZ1HhLq-Huo?si=bMM2pWcWPSOiXjjT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div id = 'stickyExpander'></div>
+        <footer>
+            <div id = 'container'>
+                <div id = 'overview'>
+                    <h1>Reinventing Cities</h1>
+                    <p>CityMotion is a website designed to advocate for, and promote advocacy for better cities in America.</p>
+                </div>
+                <div id = 'btn'>
+                    <p>Learn more about the bike and public transportation infrastructure in the US...</p>
+                    <a href = "commute.html"><button onclick = 'btnClicked()'>Learn</button></a>
+                </div>
+            </div>
+            <img src="/ICONS/projectAltF4.png" alt="">
+        </footer>
+    </div>
+<script src = '/JAVASCRIPT/menu.js'></script>
+<script src = '/JAVASCRIPT/road.js'></script>
+</body>
+</html>

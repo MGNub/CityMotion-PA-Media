@@ -1,0 +1,241 @@
+:root {
+    --bgColor : black;
+}
+body {
+    background : rgb(20, 20, 20);
+    height : fit-content;
+}
+
+/*intro animation*/
+
+#intro {
+    position : fixed;
+    top : 0;
+    left : 0;
+    height : 100vh;
+    width : 100vw;
+    background :rgb(125, 149, 209);
+    overflow : hidden;
+}
+
+#earth {
+    background : url('/IMAGES/earth.png');
+    position : fixed;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+    height : 20vh;
+    width : 20vh;
+    background-color : black;
+    background-size : 100%;
+    border-radius : 50%;
+    overflow : hidden;
+    animation : earthLoad 1.3s ease-in-out;
+    transition : all 0.3s ease-in-out;
+    cursor : pointer;
+    z-index : 15;
+}
+
+#earth #earthFill {
+    position : absolute;
+    background : var(--bgColor);
+    height : 110%;
+    width : 100%;
+    transform : translateY(-150%);
+    transition : all 0.8s ease-in-out;
+}
+
+#earth #globe {
+    position : absolute;
+    background : url('/IMAGES/global.png');
+    background-size : 80%;
+    background-repeat : no-repeat;
+    background-position : center;
+    height : 100%;
+    width : 100%;
+    transform : translateY(100%);
+    transition : all 0.6s ease-in-out;
+    opacity : 0;
+    z-index : 15;
+}
+
+#loadIn {
+    background : var(--bgColor);
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+    height : 0;
+    width : 0;
+    border-radius : 50%;
+    transition : all 0.8s ease-in-out;
+}
+
+/*map*/
+
+#mapContainer {
+    position : absolute;
+    top : 0;
+    left : 0;
+    transform : scaleX(0%);
+    background : black;
+    transition : all 1s ease-in-out;
+    height : 100vh;
+    width : 100vw;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+}
+
+#map {
+    background : rgb(3, 9, 70);
+    height : 80vh;
+    width : 80vw;
+}
+
+
+svg path {
+    fill : rgb(99, 99, 185);
+    cursor : pointer;
+    stroke : white;
+    stroke-width : 20px;
+}
+
+svg a:hover path {
+    fill : rgb(201, 235, 255);
+    transition-duration : 0.2s;
+}
+
+/*dakar*/
+
+.city {
+    position : absolute;
+    top : 0;
+    left : 0;
+    height : 400vh;
+    width : 100vw;
+    z-index : 10;
+    transform : translateX(-100vw);
+    transition : all 0.8s ease-in-out;
+    background : #27476e;
+}
+
+.city .page1 {
+    position : absolute;
+    top : 0;
+    left:  0;
+    background : transparent;
+    height : 100vh;
+    width : 100vw;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    gap : 2rem;
+}
+
+.city .page1 .text{
+    display : flex;
+    flex-direction : column;
+    width : 50vw;
+    gap : 0.5rem;
+}
+
+/* .heading {
+    width : 100%;
+} */
+
+.city h1 {
+    font-size : 5rem;
+    margin : 0;
+}
+.city h2 {
+    font-size : 1rem;
+    color : rgba(255, 255, 255, 0.654);
+    text-align : left;
+    margin-top : 0;
+    margin-right : 20px;
+}
+
+.city p {
+    font-size : 1.8rem;
+}
+
+.city img {
+    width : 40vw;
+}
+
+/*amsterdam*/
+
+#amsterdam {
+    position : absolute;
+    top : 0;
+    left:  0;
+    height : 400vh;
+    width : 100vw;
+    z-index : 10;
+    transform : translateX(-100vw);
+    transition : all 1s ease-in-out;
+
+}
+
+#amsterdam .page1 {
+    position : absolute;
+    top : 0;
+    left:  0;
+    background : transparent;
+    height : 100vh;
+    width : 100vw;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    gap : 2rem;
+}
+
+#amsterdam .page1 .text{
+    display : flex;
+    flex-direction : column;
+    width : 50vw;
+    gap : 2rem;
+}
+
+.heading {
+    width : fit-content;
+}
+
+#amsterdam h1 {
+    font-size : 5rem;
+    margin : 0;
+}
+#amsterdam h2 {
+    font-size : 1rem;
+    color : rgba(255, 255, 255, 0.654);
+    text-align : right;
+    margin-top : 0;
+}
+
+#amsterdam p {
+    font-size : 1.8rem;
+}
+
+#amsterdam img {
+    width : 40vw;
+}
+/*animations*/
+
+@keyframes earthLoad {
+    0% {
+        opacity : 0%;
+        transform : translate(-50%, -50vh) rotate(-180deg);
+        pointer-events : none;
+    }
+    50% {
+        transform : translate(-50%, -10%) rotate(-90deg);
+    }
+    80% {
+        transform : translate(-50%, -55%) rotate(-36deg);
+    }
+    100%  {
+        transform : translate(-50%, -50%) rotate(0deg);
+        pointer-events : none;
+    }
+}

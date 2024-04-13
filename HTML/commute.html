@@ -1,0 +1,157 @@
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityMotion</title>
+    <link rel="stylesheet" href="/CSS/menu.css">
+    <link rel="stylesheet" href="/CSS/commute.css">
+    <link rel="icon" href="/IMAGES/logo.png">
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://rawgit.com/nathco/jQuery.scrollSpeed/master/jQuery.scrollSpeed.js"></script> -->
+</head>
+<body>
+    <img src="/ICONS/arrowUp.png" alt="">
+    <div id = 'intro'>
+        <div></div>
+        <div></div>
+        <div id = 'header'><h1>COMMUTING</h1></div>
+    </div>
+    <div id = 'menuBackground'></div>
+    <div id = 'menu'>
+        <div id = 'menuBar'>
+            <a id = 'title' href = '/index.html'>
+                <img id = 'logo' src="/IMAGES/logo.png" alt="">
+                <div>
+                    <h1 id = 'titleText'>CityMotion</h1>
+                </div>
+            </a>
+            <div id = 'empty'></div>
+        </div>
+        <div id = 'menuBtn' class = 'reveal'>CityMotion</div>
+        <div id = 'menuBtn2' class = ''>
+            <a href = '/index.html'>Home</a>
+            <a href = 'road.html'>Road Infrastructure</a>
+            <a class = 'active'>Difficulties of Commuting</a>
+            <a href = 'cities.html'>Cities Around the World</a>
+            <a href = 'contribute.html'>How to Contribute</a>
+        </div>
+    </div>
+
+    <div id = 'topPage'>
+        <div id = 'header'><h1>COMMUTING</h1></div>
+        <video id = 'topVideo' muted autoplay loop>
+            <source src = '/VIDEOS/roadsBG.mp4'>
+        </video>
+        <video id = 'bikeVideo' muted autoplay loop>
+            <source src = '/VIDEOS/bikes.mp4'>
+        </video>
+        <video id = 'transitVideo' muted autoplay loop>
+            <source src = '/VIDEOS/publicTransit.mp4'>
+        </video>
+        <div id = 'overlay'></div>
+    </div>
+    <div id = 'pages'>
+        <div id = 'page1'>
+            <h1>TRANSPORTATION PROBLEMS</h1>
+            <div id = 'page1Text'>
+                <div>
+                    <p>Commuting, whether it's to work, school, or a friend's house, has been made a lot more difficult in the United States. The carcentric road and city designs have made getting to places more time-consuming and dangerous.</p>
+                    <p>The way cities are structured makes it dangerous and inefficient to commute without a car, deterring people from other means of transportation, such as biking or riding the bus.</p>
+                    <p>Not only does it affect pedestrians and bikers, drivers are impacted negatively as well. While you'd think a carcentric design would make driving easier and more convenient, it has an opposite effect in some places.</p>
+                </div>
+                <div id = 'trafficImg' src="https://cdn.mos.cms.futurecdn.net/4taDtM9qFJ6yTmbZQDmyNV.jpg" alt=""></div>
+            </div>
+        </div>
+        <div id = 'page2'>
+            <h2>Thoughts from Philadelphians</h2>
+            <div class = 'row'>
+                <div class = 'card'>
+                    <p>“They come pretty often, lots of buses. It’s annoying when there’s detours and delays though. At least there are public buses to take, even though there are delays. Sometimes they come 30+ minutes late. Actually, if you think about it, the buses just got canceled, so it wasn’t late at all. So I went at 4, the 4:10 bus got canceled, the 4:20 bus got canceled, but the 4:30 bus came on time, so technically it was right on time.”</p>
+                    <p>- Mikey Huang</p>
+                </div>
+                <div class = 'card'>
+                    <p>“I hate the smell of weed on the subway. I like the fact that you can use your phone to get on trains, even though it makes it feels like Big Brother is watching my every move.”</p>
+                    <p>- Erik Wiessmann</p>
+                </div>
+            </div>
+            <div class = 'row'>
+                <div class = 'card'></div>
+                <div class = 'card'></div>
+            </div>
+            <!-- <div id = 'page2Slide'>
+                <h1 id = 'page2Text'>BLACK TEXT</h1>
+                <img src="/IMAGES/poorBike.jpeg" alt="dangerous bike travel">
+                <div id = "page2Text">
+                    <p>There is a lack of proper pedestrian and bike infrastructure in US cities. The lack of bike lanes and good sidewalks makes it dangerous to get to places by walking or cycling.</p>
+                    <p>The prevalence of stroads furthermore emphasizes this problem, because of their lack of adequate sidewalks, crosswalks, and bike lanes, making them dangerous and unpleasant for pedestrians and cyclists.</p>
+                </div>
+                
+            </div> -->
+        </div>
+        <div id = 'page3'>
+            <div id = 'bikeHorizontal'>
+                <div class = 'bike'></div>
+                <div id = 'bike2' class = 'bike'>
+                    <!-- <div>
+                        <div></div>
+                    </div> -->
+                    <h1>BIKES</h1>
+                </div>
+                <div class = 'bike'>
+                    <div class = 'text'>
+                        <h2>Walking</h2>
+                        <p>Traveling by foot is definitely one of the most reliable and healthiest way to commute shorter distances. It allows for an individual to exercise while moving towards their destination at the same time.</p>
+                        <h2>Biking</h2>
+                        <p>Along with walking, using a bicycle is also an excellent method of commuting. There are many cities that allow bikes to be rented for a small price or for free, which makes it more accessible, and it is also significantly faster than going on foot, making it a good option for medium and longer distances.</p>
+                    </div>
+                </div>
+                <div class = 'bike'></div>
+                <div class = 'bike'></div>
+
+                <div id = 'stripes'></div>
+            </div>
+            <div id = 'scrollProgress'>
+                <div class = 'circle'></div>
+                <div class = 'circle'></div>
+                <div class = 'circle'></div>
+                <!-- <div class = 'circle'></div> -->
+            </div>
+        </div>
+        <div id = 'page4'>
+            <h1>PUBLIC TRANSIT</h1>
+        </div>
+        <div id = 'page5'>
+            <!-- <p class = 'transitText'>The public transportation situation in the US isn't exactly the best. Subways are dangerous and unkept. Buses share roads with cars, making it vulnerable to traffic. If buses have their own lane, and if there are more bike lanes, people will have more reason to use other methods of transportation.</p> -->
+            <div class = 'transitText'>
+                <h2>US Public Transit</h2>
+                <p>Another byproduct of the car-centric cities of America is the poor state of public transportation services, which contribute to America's heavy dependency on cars. Public transit in the US is unreliable because it's often not punctual and slow.</p>    
+            </div>
+            <div class = 'transitText'>
+                <h2>Buses</h2>
+                <p>Buses share the same road as cars, making it slow due to traffic, and doesn't provide any more benefits as to driving a car in terms of time and efficiency. The subways and trains in Philly are ill-maintained and filthy, and are also lacking in security.</p>
+            </div>
+            <div class = 'transitText'>
+                <h2>Conclusion</h2>
+                <p>All of these factors, from pedestrian and bike hostile roads, to slow public transportation services, deter people from commuting using these methods of transportation, leading more people to rely on cars, which in turn also reduces traffic.</p>
+            </div>
+        </div>
+        <footer>
+            <div id = 'container'>
+                <div id = 'overview'>
+                    <h1>Reinventing Cities</h1>
+                    <p>CityMotion is a website designed to advocate for, and promote advocacy for better cities in America.</p>
+                </div>
+                <div id = 'btn'>
+                    <p>Learn more about the infrastructure of other cities all over the world...</p>
+                    <a href = "cities.html"><button onclick = 'btnClicked()'>Learn</button></a>
+                </div>
+            </div>
+            <img src="/ICONS/projectAltF4.png" alt="">
+        </footer>
+    </div>
+<script src = '/JAVASCRIPT/menu.js'></script>
+<script src = '/JAVASCRIPT/commute.js'></script>
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+:root {
+    --primaryDark : rgb(39, 71, 110);
+    --primaryLight : rgb(110, 160, 210);
+}
+
+body {
+    background : black;
+    overflow-x : hidden;
+}
+
+.titleShow {
+    transform : translateX(0) translateY(0) !important;
+    opacity : 1 !important;
+}
+
+.hidden {
+    transform : translateX(-300px) translateY(0);
+    opacity : 0;
+}
+
+.show {
+    transform : translateX(0) translateY(0) !important;
+    opacity : 1 !important;
+    transition : all 0.5s ease-in-out;
+}
+
+#intro {
+    position : absolute;
+    background : var(--primaryDark);
+    /* background : url('https://cdn.vox-cdn.com/thumbor/MJ8kwvoSzfjMXYB66Pe-y8S60a8=/50x0:934x663/1200x800/filters:focal(50x0:934x663)/cdn.vox-cdn.com/uploads/chorus_image/image/47885289/hudson_yards_max.0.jpg');
+    background-blend-mode : overlay;
+    background-color : rgba(0, 0, 0, 0.7); */
+    top : 0;
+    left : 0;
+    height : 100vh;
+    width : 100vw;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    flex-direction : column;
+    overflow : hidden;
+}
+
+#intro p {
+    position : absolute;
+}
+
+#intro .half {
+    height : 50vh;
+    width : 100vw;
+    background : var(--primaryLight);
+    transition : all 0.5s ease-in-out;
+    z-index : 2;
+}
+
+#intro #square {
+    position : absolute;
+    height : 100px;
+    width : 100px;
+    background : var(--primaryDark);
+    /* border : solid 2px rgb(110, 160, 210); */
+    transform : translateY(0) rotate(45deg);
+    animation : intro 1s ease-in-out;
+    z-index : 3; 
+}
+
+.expanded {
+
+}
+
+/* #intro #square:hover {
+    height : 115px;
+    width : 115px;
+    transition-duration : 0.3s;
+} */
+
+#intro .line {
+    position : absolute;
+    background : var(--primaryDark);
+    top : 50vh;
+    left : 50vw;
+    transform : translate(-50%, -50%);
+    animation : extend 1.6s ease-in-out;
+    height : 2px;
+    width : 100vw;
+    z-index : 3;
+}
+
+/*pages*/
+
+#pages {
+    position : absolute;
+    top : 0;
+    left : 0;
+    background : transparent;
+    height : fit-content;
+    width : 100vw;
+}
+
+#pages p {
+    font-size : 1.8rem;
+}
+
+#pages h2 {
+    font-size : 2.1rem;
+}
+
+
+.page {
+    height : 100vh;
+    width : 100vw;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    gap : 3rem;
+}
+
+.page:nth-child(2n + 3) {
+    background : var(--primaryLight);
+}
+
+/*page1*/
+
+.page:nth-child(1) h1 {
+    margin-left : 1rem;
+    font-size : 10rem;
+    transform : translateX(-90vw);
+    opacity : 0;
+    transition : all 0.8s ease-in-out;
+}
+
+/*page2*/
+
+#bgImage {
+    position : fixed;
+    top : 0;
+    left : 0;
+    height : 100vh;
+    width : 100vw;
+    background : url('https://www.ohm-advisors.com/sites/default/files/styles/1121x631/public/2019-01/adobestock_1453011972x.jpg?h=03b68ea9&itok=08zCAnjO');
+    background-size : 100%;
+    background-blend-mode : overlay;
+    background-color : rgb(0, 0, 0, 0.5);
+    z-index : -1;
+}
+
+.page:nth-child(2) {
+    background : transparent;
+}
+
+.page:nth-child(2) .text {
+    width : 50vw;
+}
+
+.page:nth-child(2) .text p {
+    width : 50vw;
+    margin-bottom : 5rem;
+}
+
+.page:nth-child(2) .text li {
+    margin : 3rem 5rem 2rem;
+    font-size : 1.25rem;
+}
+
+/*page3*/
+
+.page:nth-child(3) img {
+    width : 40vw;
+}
+
+.page:nth-child(3) .text {
+    width : 45vw;
+}
+
+/*page4*/
+
+.page:nth-child(4) {
+    background : var(--primaryDark);
+}
+
+.page:nth-child(4) img {
+    width : 40vw;
+}
+
+.page:nth-child(4) .text {
+    width : 45vw;
+}
+
+/*page5*/
+
+.page:nth-child(5) {
+    background : transparent;
+}
+
+.page:nth-child(5) p {
+    width : 60vw;
+    font-size : 2rem !important;
+    text-align : center;
+    line-height : 100px;
+}
+
+/*animations*/
+
+@keyframes intro {
+    0% {
+        transform : translateY(-70vh) rotate(-360deg);
+    }
+    60% {
+        transform : translateY(5vh);
+    }
+    80% {
+        transform : translateY(-3vh);
+    }
+}
+
+@keyframes extend {
+    0% {
+        width : 0;
+        height : 0;
+    }
+    60% {
+        width : 0;
+        height : 0;
+    }
+}

@@ -1,0 +1,305 @@
+body {
+    background : rgba(24, 47, 80, 0.774);
+    color : white;
+    height : fit-content;
+    display : flex;
+    flex-direction : column;
+    overflow-x : hidden;
+    overflow-y : hidden;
+}
+
+/*MENU*/
+
+
+/*video*/
+#background {
+    /* background : black; */
+    top : 0px;
+    left : 0px;
+    position : fixed;
+    display : flex;
+    z-index : 0;
+}
+
+#background video {
+    width : 100vw;
+    object-fit : cover;
+    z-index : -1;
+}
+
+#background div {
+    height : 100vh;
+    background : black;
+    width : 100vw;
+    z-index : 0;
+}
+
+#overlay {
+    position : fixed;
+    top : 0;
+    left : 0;
+    height : 100vh;
+    width : 100vw;
+    background : rgba(20, 36, 70, 0.674);
+    /* z-index : -1; */
+}
+
+#pages {
+    position : absolute;
+    height : fit-content;
+    top : 0;
+    left:  0;
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    justify-content : center;
+}
+
+.page {
+    height : 100vh;
+    width : 100vw;
+}
+
+/*page1*/
+
+#page1 {
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+    align-items : center;
+}
+
+#introBox {
+    width : 500px;
+    text-align : center;
+    background : radial-gradient(rgba(0, 0, 0, 0.8), transparent 70%);
+}
+
+#introBox h2 {
+    font-size : 3em;
+}
+
+#introBox button {
+    background : transparent;
+    color : white;
+    padding : 15px 50px;
+    border : solid white 2px;
+    font-weight : bold;
+    margin-top : 15px;
+}
+
+#introBox button:hover {
+    background : white;
+    color : black;
+    transition-duration : 0.5s;
+}
+
+/*page2*/
+
+.fadeLines {
+    height : 25vh;
+    width : 100vw;
+    background : linear-gradient(180deg, transparent, black);
+}
+
+#page2 {
+    background : linear-gradient(180deg, black 60%, var(--bgColor));
+}
+
+/*page3*/
+
+#page3 {
+    position : sticky;
+    top : 0;
+    background : var(--bgColor);
+    height : 100vh;
+    width : 100vw;
+    display : flex;
+    flex-direction : row;
+    align-items : center;
+    justify-content : center;
+    perspective : 100px;
+    overflow : hidden;
+}
+
+.stickyExpander {
+    width : 100vw;
+    height : 320vh;
+}
+
+#page3 #card1 {
+    background : radial-gradient(rgb(93, 93, 93), rgb(29, 29, 29));
+    height : 400px;
+    width : 500px;
+    transform : translateX(-35%) rotateY(-1deg);
+    border-radius : 50px;
+    background-size : 100%;
+}
+
+#page3 #text1 {
+    margin : 30px;
+    font-size : 1.2rem;
+    text-align : center;
+    padding-bottom : 1rem;
+    border-bottom : solid 1px white;
+}
+
+#page3 #card2 {
+    position : absolute;
+    background : url('https://www.worldatlas.com/upload/71/54/f3/shutterstock-1909896037.jpg');
+    height : 300px;
+    width : 500px;
+    transform : translateX(30%) rotateY(1deg);
+    border-radius : 50px;
+    opacity : 0;
+    background-size : 100%;
+}
+
+#page3 #card2::before {
+    content : '';
+    position : absolute;
+    background : radial-gradient(rgba(93, 93, 93, 0.3) 30%, rgb(18, 18, 18));
+    height : 300px;
+    width : 500px;
+    border-radius : 50px;
+}
+
+#page3 #text2 {
+    position : absolute;
+    width : 30vw;
+    font-size : 1.2rem;
+    transform : rotateY(-2deg);
+    opacity : 0;
+}
+
+
+/*page4*/
+
+#page4 {
+    background : var(--bgColor);
+    z-index : 10;
+}
+
+.reveal {
+    animation : reveal 4s ease-in-out;
+}
+
+
+
+#title {
+    animation : title 4.5s ease-in-out;
+}
+
+#menuBar #logo {
+    animation : rotate 1.2s ease-in-out;
+    animation-delay : 3.4s; 
+}
+
+/*animations*/
+
+@keyframes reveal {
+    0% {
+        top : 50%;
+        right : 50%;
+        transform : translate(50%, -5vh);
+        height : 0;
+        width : 0;
+        font-size : 6em;
+        border-bottom : solid 5px white;
+        border-top : solid 0px white;
+        pointer-events : none;
+        opacity : 1;
+        cursor : default;
+    }
+    25% {
+        transform : translate(50%, -10vh);
+        height : 0;
+        width : 500px;
+    }
+    40% {
+        height : 100px;
+        width : 500px;
+        transform : translate(50%, -50%);
+        top : 50%;
+        right : 50%;
+        font-size : 6em;
+        border-top : none;
+        border-bottom : solid 5px white;
+    }
+    70% {
+        top : 25px;
+        right : 25px;
+        transform : translate(0%, 0%);
+        font-size : 1em;
+        width : 80px;
+        height : 20px;
+        
+    }
+    80% {
+        font-size : 1em;
+        border-bottom : solid 1px white;
+        width : 80px;
+        height : 20px;
+    }
+    89% {
+        height : 0px;
+        font-size : 1em;
+        border-top : none;
+    }
+    90% {
+        height : 0;
+        border-top : solid 1px white;
+        font-size : 0em;
+    }
+    100% {
+        top : 25px;
+        right : 25px;
+        width : 70px;
+        height : 20px;
+        font-size : 0em;
+        border-bottom : solid 8px white;
+        border-top : solid 8px white;
+        pointer-events : none;
+        opacity : 1;
+        cursor : default;
+    }
+}
+
+#cover {
+    position : fixed;
+    top : 0;
+    left : 0;
+    background : black;
+    height : 100vh;
+    width : 100vw;
+    transform : translateY(-100vh);
+    animation : slideUp 5s ease-in-out;
+    z-index : 5;
+    /* z-index : -2; */
+}
+
+@keyframes slideUp {
+    0% {
+        transform : translateY(0);
+    }
+    80% {
+        transform : translateY(0);
+    }
+    100% {
+
+    }
+}
+
+/*background*/
+
+/* #background {
+    background : url('/homeImages/fogCity.jpg');
+    position : absolute;
+    top : 0;
+    left :0vw;
+    width : 100vw;
+    height : 400vh;
+    background-size : 100%;
+    background-blend-mode : overlay;
+    background-color : rgba(0, 0, 0, 0);
+} */

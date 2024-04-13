@@ -1,0 +1,95 @@
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityMotion</title>
+    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="stylesheet" href="CSS/menu.css">
+    <link rel = 'icon' href = 'IMAGES/logo.png'>
+</head>
+<body>
+
+    <div id = 'background'>
+        <video id = 'backgroundVideo' muted autoplay loop>
+            <source src = 'VIDEOS/topViewTraffic.mp4'>
+        </video>
+        <div id = 'postVideo'></div>
+    </div>
+
+    <div id = 'overlay'></div>
+    <div id = 'cover'></div>
+
+    <div id = 'menuBackground'></div>
+    <div id = 'menu'>
+        <div id = 'menuBar'>
+            <a id = 'title' href = ''>
+                <img id = 'logo' src="IMAGES/logo.png" alt="">
+                <div>
+                    <h1 id = 'titleText'>CityMotion</h1>
+                </div>
+            </a>
+            <div id = 'empty'></div>
+        </div>
+        <div id = 'menuBtn' class = 'reveal'>CityMotion</div>
+        <div id = 'menuBtn2' class = ''>
+            <a class = 'active'>Home</a>
+            <a href = 'HTML/road.html'>Road Infrastructure</a>
+            <a href = 'HTML/commute.html'>Difficulties of Commuting</a>
+            <a href = 'HTML/cities.html'>Cities Around the World</a>
+            <a href = 'HTML/contribute.html'>How to Contribute</a>
+        </div>
+    </div>
+
+    <div id = 'pages'>
+        <div id = 'page1' class = 'page'>
+            <div id = 'introBox'>
+                <h2>Reinventing Cities</h2>
+                <p>Today, the country of America suffers from heavy carcentrism, leading to poor city infrastructure. The cities of America are designed for the car, built around the car, and bulldozed for the car.</p>
+                <button id = 'homeBtn'>LEARN MORE</button>
+            </div>
+        </div>
+        <div class = 'fadeLines'></div>
+        <div id = 'page2' class = 'page'></div>
+        <div id = 'page3' class = 'page'>
+
+            <div id = 'card1' class = 'card'>
+                <p id = 'text1'>There are many issues with American cities, and this website will dive more into the cars, roads, and transportation aspect of urban planning.</p>
+            </div>
+            <!--text-->
+
+            <div id = 'card2' class = card></div>
+            <p id = 'text2'>The goal of this website is to advocate for, and promote advocacy for better and safer cities in America.</p>
+
+        </div>
+        <div class = 'stickyExpander'></div>
+        <footer>
+            <div id = 'container'>
+                <div id = 'overview'>
+                    <h1>Reinventing Cities</h1>
+                    <p>CityMotion is a website designed to advocate for, and promote advocacy for better cities in America.</p>
+                </div>
+                <div id = 'btn'>
+                    <p>Learn more about the road infrastructure in the US, and how they're designed...</p>
+                    <a href = "HTML/road.html"><button onclick = 'btnClicked()'>Learn</button></a>
+                </div>
+            </div>
+            <img src="/ICONS/projectAltF4.png" alt="">
+        </footer>
+        <!-- <div id = 'page4' class = 'page'></div> -->
+    </div>
+
+    <!-- <div id = 'container'>
+        <div>
+            <div>
+                <h1>SUP</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa molestias, deleniti quidem dolorem fuga, veritatis excepturi architecto libero dicta quas explicabo sint aut similique eius, non dolor adipisci saepe accusamus.</p>
+            </div>
+            <div></div>
+        </div>
+    </div> -->
+
+<script src = "JAVASCRIPT/home.js"></script>
+<script src = 'JAVASCRIPT/menu.js'></script>
+</body>
+</html>
+

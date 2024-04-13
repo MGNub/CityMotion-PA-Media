@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap')
+
+:root {
+    --bgColor : #27476e;
+    /* rgba(24, 47, 80, 1); */
+}
+
+body {
+    height : fit-content;
+    background : var(--bgColor);
+    overflow-y : hidden;
+    overflow-x : hidden;
+    display : flex;
+    flex-direction : column;
+}
+
+#intro {
+    overflow : hidden;
+    position : fixed;
+    top : 0;
+    left : 0;
+    height : 100vh;
+    width : 100vw;
+    background : black;
+    z-index : 500;
+    cursor : pointer;
+}
+
+.animateIntro {
+    animation : introSlide 1s ease-in-out;
+}
+
+#intro h2 {
+    position : absolute;
+    font-size : 4rem;
+    width : 60vw;
+    top : 50vh;
+    transform : translateY(-50%);
+    margin : 0 7rem;
+    pointer-events : none;
+}
+
+#intro h2 p {
+    opacity : 0;
+    margin : 10px;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+#intro #clickPrompt {
+    position : absolute;
+    font-size : 1rem;
+    color : white;
+    text-shadow : 0px 2px 5px white;
+    animation : bob 5s ease-in-out infinite;
+    opacity : 1;
+    margin-top : 5rem;
+    margin-left : calc(8rem + 10px);
+    top : 70vh;
+}
+
+.textAnimate {
+    animation : fadeIn 0.7s ease-in-out;
+}
+
+/*page*/
+#pages {
+    display : flex;
+    flex-direction : column;
+
+    position : absolute;
+    top : 0;
+    left : 0;
+}
+
+.page {
+    height : 100vh;
+    width : 100vw;
+}
+
+.transparent {
+    opacity : 0;
+}
+
+/*page1*/
+
+#page1 {
+    display : flex;
+    align-items : center;
+}
+
+#page1 div {
+    position : fixed;
+    top : 50%;
+    transform : translateY(-50%);
+    margin-left : 10rem;
+    font-size : 4rem;
+    width : 40rem;
+}
+
+#page1 div h2 {
+    margin : 0;
+    color : rgb(201, 0, 0);
+    font-size : 8rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+#page1 div p {
+    font-size : 3rem;
+    margin : 0;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/*page2*/
+
+#page2 {
+    height : 400vh;
+}
+
+#page2Stick {
+    position : sticky;
+    top : -10rem;
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    gap : 5rem;
+    padding-top : 10rem;
+}
+
+#page2 #roadText {
+    width : 40vw;
+    font-size : 2rem;
+}
+
+#page2 #roadImage {
+    height : 35vw;
+    width : 35vw;
+    background : url('https://hips.hearstapps.com/hmg-prod/images/route-101-california-getty-images-1585667994.jpg');
+    background-size : 150%;
+    background-position-x : 50%;
+    box-shadow : 0 0 10px 10px var(--bgColor) inset;
+    border-radius : 100px;
+}
+
+#page2 p {
+    transition : all 0.5s ease-in-out;
+    font-family: "Spectral", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+#page2 h2 {
+    margin : 0;
+    margin-top : 3rem;
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+#page2 #roadLine {
+    margin-bottom : 3rem;
+    background : white;
+    height : 2px;
+    width : 0;
+    /* background : rgb(10, 10, 20);
+    border-radius : 20px;
+    overflow : hidden; */
+}
+
+/*page3*/ 
+#page3 {
+    height : 400vh;
+}
+#page3Stick {
+    position : sticky;
+    top : 0;
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    gap : 5rem;
+    flex-direction : row-reverse;
+    padding-bottom : 10rem;
+}
+
+#page3 #streets::after {
+    content : '';
+    display : block;
+    position : absolute;
+    height : 35vw;
+    width : 35vw;
+    box-shadow : 0 0 10px 10px var(--bgColor) inset;
+    border-radius : 100px;
+    transform : translateY(-35vw);
+}
+
+#page3 #streetsVideo {
+    height : 35vw;
+    width : 35vw;
+    object-fit : cover;
+    box-shadow : 0 0 10px 10px var(--bgColor) inset;
+    border-radius : 100px;
+    z-index : -10;
+}
+
+#page3 #streetText {
+    width : 40vw;
+    font-size : 2rem;
+}
+
+#page3 h2 {
+    margin : 0;
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+#page3 #streetP {
+    margin : 0;
+    transition : all 0.5s ease-in-out;
+    font-family: "Spectral", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+#page3 #streetLine {
+    margin-bottom : 3rem;
+    background : white;
+    height : 2px;
+    width : 0;
+}
+/*page4*/
+#page4 {
+    position : relative;
+    background : black;
+    display : flex;
+    align-items : center;
+    padding-top : 10rem;
+    padding-bottom : 5rem;
+    flex-direction : column;
+    border-top-right-radius : 50px;
+}
+
+#page4 h1 {
+    margin : 0;
+    font-size : 3rem;
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+#pros {
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    gap : 8rem;
+    width : 100vw;
+    height : 100vh;
+}
+
+#pros div {
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    flex-direction : column;
+    width : 350px;
+    text-align : center;
+}
+
+#pros #left {
+    position: relative;
+    left: 80px;
+}
+
+#pros #right {
+    position: relative;
+    right: 80px;
+}
+
+#pros h2{
+    margin : 0;
+    font-family: "Spectral", serif;
+    font-weight: 500;
+    font-style: italic;
+    text-align: left;
+}
+
+#pros p {
+    font-size : 1.25rem;
+    font-family: "Spectral", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+#pros div img {
+    width : 220px;
+    height : 220px;
+    padding : 15px;
+    margin-bottom : 10px;
+}
+
+.curve {
+    position : absolute;
+    height : 250px;
+    width : 100%;
+    top : 0;
+}
+
+.curve::before {
+    content : '';
+    display : block;
+    position : absolute;
+    top : 0;
+    border-radius : 100% 50%;
+    background : var(--bgColor);
+    width : 55%;
+    height : 80%;
+    transform : translate(-2%, -55%);
+}
+
+.curve::after {
+    content : '';
+    display : block;
+    position : absolute;
+    top : 0;
+    border-radius : 100% 100%;
+    background : black;
+    width : 50%;
+    height : 80%;
+    transform : translate(50vw, -31%);
+}
+
+/*page5*/
+
+#page5 {
+    height : 140vh;
+    position : relative;
+    background : black;
+    min-height : 100vh;
+    flex-direction : column;
+}
+
+#stroad1 {
+    height : 140vh;
+    width : 100vw;
+    background : url('https://images.squarespace-cdn.com/content/v1/53dd6676e4b0fedfbc26ea91/a7cc57a3-4e9c-4ce8-9a7c-54db9b6f3487/US_19_033.jpg');
+    background-color : rgba(0, 0, 0, 0.3);
+    background-size : 100%;
+    background-blend-mode : overlay;
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+}
+
+#stroad1::after {
+    content : '';
+    display : block;
+    position : absolute;
+    background : linear-gradient(to bottom, black, transparent);
+    height : 25vh;
+    width : 100vw;
+    top : 0px;
+    z-index : 0;
+}
+
+#stroad1 h1 {
+    font-size : 5rem;
+    border-bottom : solid 1px white;
+    height : fit-content;
+    padding : 0 2rem;
+    z-index : 1;
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+#page5 iframe {
+    width : 70vw;
+    height : 80vh;
+}
+
+/*animations*/
+.show {
+    opacity : 1 !important;
+    transform : translateX(0) !important;
+}
+
+#intro h2 p:nth-child(2) {
+    animation-delay : 150ms;
+}
+
+#intro h2 p:nth-child(3) {
+    animation-delay : 300ms;
+}
+
+#intro h2 p:nth-child(4) {
+    animation-delay : 450ms;
+}
+
+@keyframes introSlide {
+    0% {
+        height : 100vh;
+    }
+    100% {
+        height : 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        transform : translateY(-100%);
+        opacity : 0%;
+    }
+    100% {
+        opacity : 100%;
+    }
+}
+
+@keyframes bob {
+    0% {
+        transform : translateY(0%);
+    }
+    50% {
+        transform : translateY(50%);
+    }
+
+}
+
+#stickyExpander {
+    width : 100vw;
+    height : 100vh;
+    background : transparent;
+}
