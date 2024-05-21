@@ -7,7 +7,7 @@
 body {
     height : fit-content;
     background : black;
-    /* overflow-y : hidden; */
+    overflow-y : hidden;
     overflow-x : hidden;
 }
 
