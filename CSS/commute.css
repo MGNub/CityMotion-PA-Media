@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
 :root {
-    --bgColor : rgba(24, 47, 80, 1);
+    --bgColor : #27476e;
 }
 
 body {
-    height : 1500vh;
+    height : fit-content;
     background : black;
-    overflow-y : hidden;
+    /* overflow-y : hidden; */
     overflow-x : hidden;
 }
 
@@ -82,10 +84,12 @@ body {
 }
 #header h1 {
     margin : 0;
-    font-style : italic;
     font-size : 10rem;
-    font-weight : bold;
     animation : textPopIn 1.5s ease-in-out;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: italic;
 }
 
 #pages {
@@ -109,28 +113,66 @@ body {
     position : sticky;
     background : var(--bgColor);
     top : 0;
+    padding-top: 5vh;
+    padding-bottom: 3vh;
     font-size : 16vh;
-    font-weight : bold;
     margin-left : 3rem;
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
 }
 
 #page1Text {
+    display : flex;
+    width : 150vw;
+}
+
+#page1Text div:nth-child(1) {
     margin : 50vh 0 0 3rem;
     display : flex;
     flex-direction : column;
     gap : 50vh;
+    width : 50vw;
 }
 
 #page1 p {
     font-size : 5vh;
-    width : 50%;
+    font-family: "Spectral", serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
-#page1 #trafficImg {
+/* #page1 #trafficImg {
     position : fixed;
     top : 50vh;
     left : 100vw;
-    transform : translateY(-25%);
+    transform : translateY(-35%);
+    margin : 0;
+    height : 60vh;
+    width : 60vh;
+    border-radius : 50%;
+    background : url('https://cdn.mos.cms.futurecdn.net/4taDtM9qFJ6yTmbZQDmyNV.jpg');
+    transition : transform 0.8s ease-in-out, opacity 0.4s ease-in-out;
+    box-shadow : 0 0 5px 5px white inset;
+} */
+
+/* #page1 #trafficImg {
+    position : sticky;
+    top : 40vh;
+    margin : 0;
+    height : 55vh;
+    width : 55vh;
+    border-radius : 50%;
+    background : url('https://cdn.mos.cms.futurecdn.net/4taDtM9qFJ6yTmbZQDmyNV.jpg');
+    transition : transform 0.8s ease-in-out, opacity 0.4s ease-in-out;
+    box-shadow : 0 0 5px 5px white inset;
+} */
+
+#page1 #trafficImg {
+    position : sticky;
+    top : 30vh;
+    left : 64vw;
     margin : 0;
     height : 60vh;
     width : 60vh;
@@ -143,25 +185,179 @@ body {
 /*page2*/ 
 
 #page2 {
-    padding-top : 50vh;
-    height : 120vh;
+    padding-top : 20vh;
+    height : 100vh;
     width : 100vw;
     background : black;
+    display : flex;
+    justify-content : space-evenly;
+    align-items : space-evenly;
+    flex-direction : column;
     transition : all 0.8s ease-in-out;
+    z-index : 5;
 }
 
-#page2 h1 {
-    font-size : 5rem;
-    margin-left : 3rem;
+#page2 h2 {
+    position : absolute;
+    top : 380vh;
+    left : 50vw;
+    transform : translate(-50%, -50%);
+    font-size : 3rem;
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
 }
-#page2 img {
+
+#page2 .row {
+    display : flex;
+    justify-content : space-evenly;
+    align-items : space-evenly;
+}
+
+body {
+    background : rgb(20, 20, 20);
+    color : white;
+}
+
+.cardContainer {
+    perspective : 1000px;
+}
+
+
+.card {
+    height : 50vh;
+    width : 50vh;
+    transition : all 1s ease-in-out;
+    transform-style : preserve-3d;
+    backface-visibility : hidden;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    text-align: center;
+    padding: 2rem;
+    font-size : 2rem;
+}
+
+.cardContainer:nth-child(1) .card {
+    background : url('https://media.timeout.com/images/103935618/image.jpg');
+    background-position: center;
+    background-size: cover;
+    background-blend-mode : overlay;
+    background-color : rgba(39, 71, 110, 0.713);
+}
+
+.cardContainer:nth-child(2) .card {
+    background : url('https://media.phillyvoice.com/media/images/21820-septa-countdown-clocks-mfl-b.2e16d0ba.fill-735x490.jpg');
+    background-position: center;
+    background-size: cover;
+    background-blend-mode : overlay;
+    background-color : rgba(39, 71, 110, 0.713);
+}
+
+
+.cardContainer:nth-child(1):hover .card {
+    transform : rotateY(-180deg);
+}
+
+.cardContainer:nth-child(2):hover .card {
+    transform : rotateY(180deg);
+}
+
+.card::before {
+    position : absolute;
+    height : 50vh;
+    width : 50vh;
+    z-index : -1;
+    transform : rotateY(180deg);
+    backface-visibility : hidden;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    text-align: center;
+    padding: 2rem;
+    color: white;
+}
+
+.cardContainer:nth-child(1) .card::before {
+    content : '“They come pretty often, lots of buses. It’s annoying when there’s detours and delays though. At least there are public buses to take, even though there are delays. Sometimes they come 30+ minutes late. Actually, if you think about it, the buses just got canceled, so it wasn’t late at all. So I went at 4, the 4:10 bus got canceled, the 4:20 bus got canceled, but the 4:30 bus came on time, so technically it was right on time.”';
+    background : url('https://media.timeout.com/images/103935618/image.jpg');
+    background-position: center;
+    background-size: cover;
+    background-blend-mode : overlay;
+    background-color : rgba(27, 57, 94, 1);
+    font-size: 1.3rem;
+}
+
+.cardContainer:nth-child(2) .card::before {
+    content : '“I hate the smell of weed on the subway. I like the fact that you can use your phone to get on trains, even though it makes it feels like Big Brother is watching my every move.”';
+    background : url('https://media.phillyvoice.com/media/images/21820-septa-countdown-clocks-mfl-b.2e16d0ba.fill-735x490.jpg');
+    background-position: center;
+    background-size: cover;
+    background-blend-mode : overlay;
+    background-color : rgba(27, 57, 94, 1);
+    font-size: 1.3rem;
+}
+
+/* 
+    #page2 .card {
+        background : rgb(43, 85, 95);
+        height : 350px;
+        width : 450px;
+        border-radius : 30px;
+        z-index : 1;
+        box-shadow : 0px 0px rgb(13, 32, 73);
+        transition : all 0.3s ease-in-out;
+        transform : translate(0, 0);
+    }
+
+    #page2 .card:hover {
+        transform : translate(-10px, -10px);
+        box-shadow : 10px 10px rgb(13, 32, 73);
+    }
+
+    #page2 .card p:nth-child(1) {
+        margin : 20px;
+        font-size : 1.3rem;
+    }
+
+    #page2 .card p:nth-child(2) {
+        position : absolute;
+        right : 0;
+        bottom : 0;
+        margin : 30px;
+        font-size : 1.5rem;
+        font-weight : bold;
+    } */
+
+
+/* #page2 .card::before:hover {
+    content : '';
+    position : absolute;
+    background : red;
+    height : 350px;
+    width : 350px;
+    border-radius : 30px;
+    z-index : -1;
+} */
+/* #page2 img {
     width : 40vw;
 }
 #page2 #page2Slide {
     display : flex;
     flex-direction : row;
+    justify-content : center;
+    align-items : center;
     gap : 3rem;
     margin-left : 3rem;
+}
+
+#page2Slide h1 {
+    font-size : 8rem;
+    color : black;
+    font-weight : bold;
+    font-family : Arial, Helvetica, sans-serif;
+    transition : all 0.8s ease-in-out;
 }
 
 #page2Text{
@@ -172,13 +368,14 @@ body {
 #page2 p {
     font-size : 2rem;
     width : 50VW;
-}
+} */
 
 /*page3 - Horizontal Bike*/
 
 #page3 {
-    height : calc(200vw + 100vh);
+    height : calc(400vw + 100vh);
     width : 300vw;
+    z-index : 2;
 }
 
 #bikeHorizontal {
@@ -186,27 +383,169 @@ body {
     top : 0;
     display : flex;
     height : 100vh;
-    width : 300vw;
+    width : 600vw;
+    z-index : 5;
 }
 
 #bikeHorizontal .bike {
     height : 100vh;
+}
+
+.bike:nth-child(1) {
     width : 100vw;
 }
 
-#bikeHorizontal div:nth-child(even) {
+#bikeHorizontal div:nth-child(2) {
     background : rgb(117, 156, 212);
-    color : rgb(73, 101, 192);
+    color : rgb(24, 74, 166);/*rgb(41, 85, 167)*/
+    width : 100vw;
+    z-index : 5;
 }
 
-#bikeHorizontal div:nth-child(even) h1 {
+.bike:nth-child(n+2) {
+    background-color : rgba(0, 0, 0, 0.3);
+}
+
+#bike2 div {
+    overflow : hidden;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+}
+
+#bike2 div div {
+    height : 100vh;
+    width : 120vh;
+    background : radial-gradient(lightcyan, transparent 60%);
+    animation : rotate1 10s infinite;
+    background-size : 100%;
+    background-position : center;
+    border-radius : 50%;
+}
+
+#bike2 h1 {
     position : absolute;
-    left : 110vw;
+    left : 150vw;
+    top : 50vh;
+    transform : translate(-50%, -50%);
     margin : 0;
-    font-family : Arial, Helvetica, sans-serif;
+    /* font-family : Arial, Helvetica, sans-serif; */
     font-size : 18rem;
-    font-weight : bold;
-    text-shadow : 125px 160px rgb(41, 85, 167), 250px 320px rgb(61, 12, 97);
+    /* font-weight : bold; */
+    text-shadow : 32px 0px rgb(35, 52, 83);
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    /*slide from left*/
+}
+
+#bike2 h1::before {
+    content : 'WALK';
+    position : absolute;
+    transform : translate(-8rem, -9rem);
+    color : rgb(73, 101, 192);
+    z-index : -1;
+    /*slide from left*/
+}
+
+#bike2 h1::after {
+    content : 'RUN';
+    position : absolute;
+    transform : translate(calc(-100% + 6rem), 9rem);
+    color : rgb(82, 34, 130); /*rgb(61, 12, 97);*/
+    /*slide/come from above*/
+}
+
+.bike:nth-child(3) {
+    display : flex;
+    align-items : center;
+    width : 300vw;
+}
+
+.bike:nth-child(3) .text {
+    display : flex;
+    flex-direction : column;
+    width : 55vw;
+    /* border-right : solid 2px white; */
+    padding-right : 20vw;
+    position : sticky;
+    left : 15vw;
+    margin-left : 25vw;
+    text-shadow : 5px 5px 5px black;
+    transition : all 0.3s ease-in-out;
+}
+
+.bike:nth-child(3) h2 {
+    font-size : 2rem;
+    margin-bottom : 10px;
+}
+
+.bike .text h2 {
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;    
+}
+
+.bike .text p {
+    font-size : 1.4rem;
+    font-family: "Spectral", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.bike:nth-child(4) {
+    width : 100vw;
+}
+
+#stripes {
+    position : absolute;
+    left : 0vw;
+    /* top : 0vh; */
+    transform : translateY(-50%);
+    height : 100vw;
+    width : 50px;
+    background : rgb(0, 0, 0, 0.3);
+    z-index : -1;
+    rotate : 45deg;
+    box-shadow : -960px 240px rgb(0, 0, 0, 0.3), -720px 240px rgb(0, 0, 0, 0.3), -480px 240px rgb(0, 0, 0, 0.3), -240px 240px rgb(0, 0, 0, 0.3), 240px -100px rgb(0, 0, 0, 0.3), 480px -100px rgb(0, 0, 0, 0.3), 720px -400px rgb(0, 0, 0, 0.3), 960px -800px rgb(0, 0, 0, 0.3);
+}
+
+/*scroll progress*/
+
+.bikeHidden {
+    transform : translateX(5%);
+    opacity : 0;
+}
+
+#scrollProgress {
+    background : rgba(223, 217, 217, 0.7);
+    background-blend-mode : overlay;
+    height : 60vh;
+    width : 1px;
+    position : fixed;
+    top : 50vh;
+    left : 92vw;
+    transform : translate(-50px, -50%);
+    display : flex;
+    flex-direction : column;
+    justify-content : space-between;
+    transition : all 0.3s ease-in-out;
+    opacity : 0;
+    z-index : 5;
+}
+
+#scrollProgress div {
+    width : 10px;
+    height : 10px;
+    border : 1px white solid;
+    transform : translateX(-50%);
+    border-radius : 50%;
+    background : rgb(218, 218, 218);
+    transition : all 0.3s ease-in-out;
+    cursor : pointer;
+    
 }
 
 /*page4*/
@@ -217,37 +556,62 @@ body {
     width : 100vw;
     display : flex;
     align-items : center;
+    z-index : 5;
 }
-
+    
 #page4 h1 {
-    font-size : 15rem;
-    margin : 0 2rem 0 0;
-    text-align : right;
+    margin-top: 80px;
+    margin-left: 300px;
+    font-size : 11rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: italic;
 }
 
-/*page5*/
+/* 
+
+/*p */
 
 #page5 {
-    height : 250vh;
+    position : relative;
+    height : 620vh;
     width : 100vw;
+    background : rgba(0, 0, 0, 0.3);
 }
 
-#page5 p {
+#page5 .transitText:nth-child(1) {
+    margin-top : 100vh;
+}
+
+#page5 .transitText {
     position : sticky;
     top : 50vh;
-    margin-top : 50vh;
+    margin-bottom : 100vh;
     margin-left : 50vw;
     transform : translateX(-50%) translateY(-50%);
     font-size : 2.5rem;
     width : 65vw;
     text-align : center;
+    /* text-shadow : 3px 3px 5px black, -3px -3px 5px black; */
 }
 
-/*footer*/
+#page5 .transitText h2 {
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
 
-footer {
-    position : absolute;
-    bottom : 0;
+#page5 .transitText p {
+    font-family: "Spectral", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.textHidden {
+    opacity : 0;
+    transform : translateY(-10%);
 }
 
 /*animations*/
@@ -299,5 +663,23 @@ footer {
     }
     100% {
         transform : translateX(0);
+    }
+}
+
+@keyframes rotate1 {
+    /* 0% {
+        background : radial-gradient(white, transparent 60%);
+    }
+    50% {
+        background : radial-gradient(white, transparent 30%);
+    }
+    100% {
+        background : radial-gradient(white, transparent 60%);
+    } */
+    0% {
+        background-size : 100%;
+    }
+    100% {
+        rotate : 360deg
     }
 }

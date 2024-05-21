@@ -1,0 +1,227 @@
+@media (max-width : 600px) {
+    body {
+        overflow-x : hidden;
+        width : 100vw;
+    }
+
+    #intro h2 {
+        width : 90vw;
+        margin : 0;
+        left : 50vw;
+        transform : translate(-50%, -50%);
+        font-size : 4rem;
+    }
+
+    #clickPrompt {
+        margin-top : 5vh;
+        margin-left : 10vw;
+        font-size : 2rem;
+    }
+
+    #page1 div {
+        margin-left : 0;
+        width : 95vw;
+        left : 3vw;
+        font-size : 5rem;
+    }
+
+    #page1 div h2 {
+        font-size : 10rem;
+    }
+
+    #page1 div p {
+        font-size : 4rem;
+        margin-bottom : 3vh;
+    }
+
+    #page2Stick, #page3Stick {
+        flex-direction : column-reverse;
+        gap : 2rem;
+    }
+
+    #page2 #roadText, #page3 #streetText {
+        width : 85vw;
+    }
+
+    #page2 #roadImage, #page3 #streets::after, #page3 #streetsVideo {
+        height : 80vw;
+        width : 80vw;
+    }
+
+    #page2 h2, #page3 h2 {
+        margin-top : 0rem;
+        margin-bottom : 2rem;
+    }
+
+    #page2 p {
+        margin : 0;
+    }
+
+    #page3 #streets::after {
+        transform : translateY(-100%);
+    }
+
+    .curve {
+        height : 80px;
+    }
+
+    #page4 { 
+        height : fit-content;
+        padding-top : 3rem;
+    }
+
+    #page4 h1 {
+        font-size : 4rem;
+    }
+
+    #row {
+        flex-direction : column;
+        gap : 10rem;
+        padding : 10rem 0;
+    }
+
+    .card {
+        height : 80vw;
+        width : 80vw;
+    }
+
+    .card .cardText {
+        justify-content : center;
+    }
+
+    .card h2 {
+        font-size : 2.2rem;
+        margin : 0;
+    }
+
+    .card p {
+        font-size : 1.6rem;
+    }
+
+    #fadeLines {
+        height : 10vh;
+    }
+
+    #page5 {
+        height : 300vh;
+    }
+
+    #stroad1 h1 {
+        font-size : 40vh;
+    }
+
+    #page6 {
+        height : fit-content;
+        display : flex;
+        flex-direction : column;
+        align-items : center;
+        justify-content : center;
+        padding : 10vh 0;
+    }
+
+    #page6::before {
+        content : '';
+        position : absolute;
+        top : 0;
+        background : linear-gradient(to bottom, black, transparent);
+        width : 100vw;
+        height : 20vh;
+    }
+
+    .parallaxText {
+        position : static !important;
+        width : 100vw !important; 
+        flex-direction : column !important;
+        margin-right : 0 !important;
+        padding : 0 !important;
+        align-items : center !important;
+        justify-content : center !important;
+        text-align : left;
+        margin : 0 !important;
+    }
+    
+    #page6 .parallaxText p {
+        width : 80% !important;
+        font-size : 2.5rem !important;
+        margin-left : 0 !important;
+        background : transparent !important;
+    }
+
+    #page6 .parallaxText h2 {
+        margin : 0;
+        text-align : left;
+    }
+
+    #page6 .parallaxText img {
+        width : 80% !important;
+    }
+
+    #page6 .parallaxText:nth-child(2) {
+        background : none;
+        box-shadow : none;
+    }
+
+    #page7 {
+        display : none;
+    }
+
+    #page8 {
+        height : 120vh;
+    }
+
+    .imgContainer .highwayBG {
+        position : static;
+        height : 100vh;
+        background-size : cover;
+        gap : 5rem;
+    }
+
+    #page8 .text {
+        width : 80%;
+        opacity : 1;
+        transform : translateY(0);
+    }
+
+    #page8 .text h2 {
+        font-size : 2.2rem;
+        color : var(--font);
+    }
+
+    #page8 .text p {
+        font-size : 1.5rem;
+    }
+
+    #page9 {
+        height : 80vh;
+        padding-bottom : 10vh;
+    }
+
+    #page9 .text {
+        translate : 0 0;
+    }
+    
+    #page10 {
+        height : 100vh;
+        display : flex;
+        flex-direction : column;
+        align-items : center;
+    }
+
+    #page10 .imgContainer {
+        position : static;
+        width : 90vw;
+    }
+
+    #page10 .text {
+        position : absolute;
+        width : 80vw;
+        text-align : center;
+        left : 50%;
+        top : 40vh;
+        transform : translateX(-50%);
+    }
+
+    #page10 .text:nth-child(2) {
+        top : 80vh;
+    }
+}

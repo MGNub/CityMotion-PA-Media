@@ -1,0 +1,130 @@
+@media (max-width : 600px) {
+    body {
+        overflow-x : scroll;
+        height : auto;
+        width : 100vw;
+    }
+
+
+    #mapContainer {
+        width : 300vw;
+    }
+
+    #map {
+        background : rgba(3, 9, 70, 0);
+        height : 100vh;
+        width : 300vw;
+        overflow-x : scroll;
+    } 
+
+    svg {
+        width : 300vw;
+    }
+
+    footer {
+        position : sticky;
+        margin-top : 100vh;
+        margin-left : -2vw;
+        top : 0;
+        left : 0;
+    }
+
+    .city {
+        position : absolute;
+        top : 0;
+        left : 0;
+        height : 300vh;
+        width : 100vw;
+        z-index : 10;
+        transform : translateX(-100vw);
+        transition : all 0.8s ease-in-out;
+        background : #27476e;
+    }
+
+    .city .page1 {
+        height : 100vh;
+        width : 100vw;
+        display : flex;
+        align-items : center;
+        background : transparent;
+        gap : 0;
+    }
+
+    .city:nth-child(1) .page1 {
+        background : url('https://cdn.britannica.com/16/152516-050-93DB4049/Goree-Island-Senegal.jpg');
+        background-color : rgba(0, 0, 0, 0.6);
+        background-blend-mode : overlay;
+    }
+
+    .city:nth-child(2) .page1 {
+        background : url('https://www.travelandleisure.com/thmb/VscfMXHNO6uBpaX2cuIW1q2ZtA8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/tokyo-japan-TOKYOTG0621-52012ff551dc46c4a87ac8e3151307a4.jpg');
+        background-color : rgba(0, 0, 0, 0.6);
+        background-blend-mode : overlay;
+    }
+
+    .city:nth-child(3) .page1 {
+        background : url('https://cdn.britannica.com/58/74858-050-13370EC5/Brisbane-Queensland-Austl.jpg');
+        background-color : rgba(0, 0, 0, 0.6);
+        background-blend-mode : overlay;
+    }
+
+    .city:nth-child(4) .page1 {
+        background : url('https://www.travelandleisure.com/thmb/lI6nagO4MS8iZ0XRg0GbnbtvKW8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-amsterdam-AMSTERDAMTGGHOG0823-a2f9a769f3c44a23b08649daf25e1c8c.jpg');
+        background-color : rgba(0, 0, 0, 0.6);
+        background-blend-mode : overlay;
+    }
+
+    .city:nth-child(5) .page1 {
+        background : url('https://toposmagazine.com/wp-content/uploads/2021/10/1-Von-Deensel_Puerto_Madero_Buenos_Aires_40689219792-min-2.jpg');
+        background-color : rgba(0, 0, 0, 0.6);
+        background-blend-mode : overlay;
+    }
+
+    .city:nth-child(6) .page1 {
+        background : url('https://www.visittheusa.com/sites/default/files/styles/hero_l/public/images/hero_media_image/2019-06/052263857bed4fbdec9ce5619f9795db.jpeg?h=8d751e12&itok=jVZAdT9f');
+        background-color : rgba(0, 0, 0, 0.6);
+        background-blend-mode : overlay;
+    }
+
+    .city img {
+        display : none;
+    }
+
+    .city .page1 .text{
+        display : flex;
+        flex-direction : column;
+        width : 90vw;
+        gap : 0.5rem;
+    }
+
+    .cityInfrastructure {
+        display : flex;
+        background : ;
+        width : 90vw;
+        height : 80vh;
+        gap : 0;
+    }
+
+    .cityInfrastructure .cityNav {
+        flex : 1;
+        width : 35%;
+    }
+
+    .cityNav span p {
+        width : fit-content;
+        margin : 0;
+        font-size : 1.5rem;
+    }
+
+    .cityInfrastructure .cityContent {
+        flex : 6;
+    }
+
+    .cityContent h2 {
+        font-size : 2.3rem;
+    }
+
+    .cityContent p {
+        font-size : 1.8rem;
+    }
+}

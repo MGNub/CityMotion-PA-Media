@@ -1,0 +1,163 @@
+@media (max-width : 600px) {
+
+    #topPage video {
+        position : fixed;
+        top : 0;
+        left : 0;
+        height : 100vh;
+        width : 100vw;
+        object-fit : cover;
+    }
+
+    #header h1 {
+        font-size : 5rem;
+    }
+
+    #page1 {
+        height : 220vh;
+    }
+    
+    #page1 h1 {
+        width : 100vw;
+        font-size : 3.5rem;
+        z-index : 3;
+        margin-left : 0;
+        padding-left : 3rem;
+    }
+
+    #page1Text div:nth-child(1) {
+        margin : 50vh 0 0 0;
+        display : flex;
+        flex-direction : column;
+        gap : 10vh;
+        width : 100vw;
+        text-align : center;
+        align-items : center;
+    }
+
+    #page1 p {
+        width : 90vw;
+        font-size : 2.3rem;
+    }
+
+    #page1 #trafficImg {
+        position : absolute;
+        top : 40vh;
+        left : 50vw;
+        margin : 0;
+        height : 80vw;
+        width : 80vw;
+        border-radius : 50%;
+        background : url('https://cdn.mos.cms.futurecdn.net/4taDtM9qFJ6yTmbZQDmyNV.jpg');
+        transition : transform 0.8s ease-in-out, opacity 0.4s ease-in-out;
+        box-shadow : 0 0 5px 5px white inset;
+        transform : translateX(-50%);
+        opacity : 1;
+        z-index : 0;
+    }
+
+    #page2 {
+        position : relative;
+        padding-top : 20vh;
+        height : 125vh;
+        width : 100vw;
+        background : var(--primaryLight);
+        display : flex;
+        justify-content : space-evenly;
+        align-items : space-evenly;
+        flex-direction : column;
+        transition : all 0.8s ease-in-out;
+        z-index : 5;
+    }
+
+    #page2 h2 {
+        position : absolute;
+        top : 10vh;
+        left : 50vw;
+        transform : translate(-50%, -50%);
+        font-size : 3rem;
+        font-family: "Karla", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 800;
+        font-style: normal;
+    }
+
+    #page2 .row {
+        display : flex;
+        flex-direction : column;
+        justify-content : space-evenly;
+        align-items : center;
+        gap : 15vh;
+    }
+
+    .card {
+        height : 70vw;
+        width : 70vw;
+        transition : all 1s ease-in-out;
+        transform-style : preserve-3d;
+        backface-visibility : hidden;
+        display : flex;
+        justify-content : center;
+        align-items : center;
+        text-align: center;
+        padding: 2rem;
+        font-size : 2rem;
+    }
+
+    .card::before {
+        height : 70vw;
+        width : 70vw;
+    }
+
+    .cardContainer:nth-child(1) .card::before {
+        font-size: 1.8rem;
+    }
+
+    .cardContainer:nth-child(2) .card::before {
+        font-size: 1.8rem;
+    }
+
+    #stripes {
+        display : none;
+        box-shadow : none;
+    }
+
+    #page3 {
+        height : 350vh;
+        width : 100vw;
+    }
+
+    #bikeHorizontal {
+        position : sticky;
+        top : 0;
+        display : flex;
+        height : 100vh;
+        width : 1100vw;
+        z-index : 5;
+    }
+
+    #bike2 h1 {
+        font-size : 12rem;
+        text-shadow : 8px 0px rgb(35, 52, 83);
+    }
+
+    #bike2 h1::before {
+        transform : translate(-2rem, -9rem);
+    }
+
+    #bike2 h1::after {
+        transform : translate(calc(-100% + 1rem), 9rem);
+    }
+
+    .bike:nth-child(n+2) {
+        width : 300vw;
+    }
+
+    #page4 h1 {
+        margin-top : 0;
+        margin-left : 0;
+        font-size : 8rem;
+    }
+
+    
+}
