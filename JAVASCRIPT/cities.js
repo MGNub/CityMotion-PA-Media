@@ -44,6 +44,14 @@ let mapState = false;
 let cityShown;
 function introExpand() {
     if (firstClick) {
+        earth.style.transform = 'translate(-50%, -50%) scale(125%)';
+        earthFill.style.transform = 'translateY(0)';
+        earthGlobe.style.transform = 'translateY(0)';
+        earthGlobe.style.opacity = '1';
+    } else {
+        earth.style.transform = 'translate(-50%, 28.5vh) scale(70%)';
+    }
+    if (firstClick) {
         if (window.innerWidth > window.innerHeight) {
             loadIn.style.height = '120vw';
             loadIn.style.width = '120vw';
