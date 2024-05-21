@@ -2,7 +2,10 @@ window.scrollTo(0, 0);
 setTimeout(letScroll, 4000);
 
 function letScroll() {
-    document.querySelector('body').style.overflowY = 'scroll';
+    if (screen.width > 600) {
+        document.querySelector('body').style.overflowY = 'scroll';
+    }
+    
 }
 
 
@@ -50,11 +53,16 @@ const homeBtn = document.getElementById('homeBtn');
 homeBtn.addEventListener('click', learn);
 
 function learn() {
-    window.scroll({
-        top : window.innerHeight * 2.25,
-        left : 0,
-        behavior : 'smooth',
-    });
+    if (screen.width > 600) {
+        window.scroll({
+            top : window.innerHeight * 2.25,
+            left : 0,
+            behavior : 'smooth',
+        });
+    } else {
+        location.href = "HTML/road.html";
+    }
+    
 }
 
 function roads() {
