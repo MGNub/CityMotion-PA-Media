@@ -23,4 +23,7 @@
         animation : none;
     }
 
+    #cover {
+        display : none;
+    }
 }
