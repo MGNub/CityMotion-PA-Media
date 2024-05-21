@@ -1,55 +1,62 @@
-// const intro = document.getElementById('intro');
-// const text = document.getElementsByClassName('introP');
+const intro = document.getElementById('intro');
+const text = document.getElementsByClassName('introP');
 
-// intro.addEventListener('click', animateIntro);
+if (screen.width < 600) {
+    numberLoad();
+}
 
-// function animateIntro() {
-//     intro.classList.add('animateIntro');
-//     intro.style.height = '0';
-//     document.querySelector('body').style.overflowY = 'scroll';
-//     document.querySelector('body').scrollTo(0, 0);
+if (screen.width > 600) {
+    intro.addEventListener('click', animateIntro);
 
-//     setTimeout(numberLoad, 500);
-// }
+    function animateIntro() {
+        intro.classList.add('animateIntro');
+        intro.style.height = '0';
+        document.querySelector('body').style.overflowY = 'scroll';
+        document.querySelector('body').scrollTo(0, 0);
 
-// console.log(window.innerWidth);
+        setTimeout(numberLoad, 500);
+    }
 
-// for(let i = 0; i < text.length; i++) {
-//     animateText();
-    
-//     function animateText() {
-//         text[i].classList.add('textAnimate');
+    console.log(window.innerWidth);
+
+    for(let i = 0; i < text.length; i++) {
+        animateText();
         
-//         console.log('hey');
-//     }
+        function animateText() {
+            text[i].classList.add('textAnimate');
+            
+            console.log('hey');
+        }
 
-//     setTimeout(delayText, 700);
-//     function delayText() {
-//         text[i].style.opacity = '100%';
-//     }
-// }
+        setTimeout(delayText, 700);
+        function delayText() {
+            text[i].style.opacity = '100%';
+        }
+    }
+}
 
-// function numberLoad() {
-//     let numbers = '1234567890';
-//     const deathTotal = document.querySelector('#page1 #pageText1 h2');
-//     let iterations = 0;
-//     const interval = setInterval(() => { 
-//         deathTotal.innerText = deathTotal.innerText.split("")
-//         .map((number, index) => {
-//             if(index < iterations) {
-//                 return deathTotal.dataset.value[index];
-//             }
 
-//             return numbers[Math.floor(Math.random() * 10)]
-//             })
-//             .join("");
+function numberLoad() {
+    let numbers = '1234567890';
+    const deathTotal = document.querySelector('#page1 #pageText1 h2');
+    let iterations = 0;
+    const interval = setInterval(() => { 
+        deathTotal.innerText = deathTotal.innerText.split("")
+        .map((number, index) => {
+            if(index < iterations) {
+                return deathTotal.dataset.value[index];
+            }
 
-//         if(iterations >= deathTotal.dataset.value.length){
-//                 clearInterval(interval);
-//         }    
-//         iterations += 1 / 3;
-//     }, 60);
-// }
+            return numbers[Math.floor(Math.random() * 10)]
+            })
+            .join("");
+
+        if(iterations >= deathTotal.dataset.value.length){
+                clearInterval(interval);
+        }    
+        iterations += 1 / 3;
+    }, 60);
+}
 
 function parallax() {
     const pageHeight = window.innerHeight;
@@ -62,8 +69,8 @@ function parallax() {
     const streetLine = document.getElementById('streetLine');
     const imageText = document.getElementById('imageText');
 
-        // pageOneText.style.top = -0.33 * window.pageYOffset + pageHeight / 2;
-        // pageOneText.style.opacity = 1 - window.pageYOffset / 500;
+        pageOneText.style.top = -0.33 * window.pageYOffset + pageHeight / 2;
+        pageOneText.style.opacity = 1 - window.pageYOffset / 500;
 
         if (window.scrollY > pageHeight * 14.4 && screen.width > 800) {
             imageText.style.marginLeft = pageHeight * -3.7 + window.innerWidth / 2;
