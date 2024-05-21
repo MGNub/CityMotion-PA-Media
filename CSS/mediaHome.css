@@ -1,0 +1,26 @@
+@media (max-width : 600px) {
+    body {
+        height : 100vh;
+        overflow-y : hidden;
+    }
+    #introBox {
+        width : 90vw;
+    }
+    #page2 {
+        display : none;
+    }
+    #page3 {
+        display : none;
+    }
+    .stickyExpander {
+        display : none;
+    }
+    footer {
+        display : none;
+    }
+
+    .reveal {
+        animation : none;
+    }
+
+}
