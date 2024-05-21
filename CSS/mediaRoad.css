@@ -1,14 +1,21 @@
 @media (max-width : 600px) {
     body {
         overflow-x : hidden;
+        overflow-y : scroll;
         width : 100vw;
     }
 
+    #intro {
+        display : none;
+    }
+
     #intro h2 {
+        position : absolute;
         width : 90vw;
         margin : 0;
+        top : 0vh;
         left : 50vw;
-        transform : translate(-50%, -50%);
+        transform : translate(-50%, 0%);
         font-size : 4rem;
     }
 
@@ -19,6 +26,9 @@
     }
 
     #page1 div {
+        position : absolute;
+        top : 50vh;
+        transform : translateY(-50%);
         margin-left : 0;
         width : 95vw;
         left : 3vw;
