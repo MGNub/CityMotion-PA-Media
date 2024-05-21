@@ -1,0 +1,125 @@
+@media (max-width : 600px) {
+    #pages p {
+        font-size : 1.8rem;
+        font-family: "Spectral", serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    #pages li {
+        font-size : 1.5rem;
+        font-family: "Spectral", serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    .page {
+        height : 100vh;
+        width : 100vw;
+        display : flex;
+        justify-content : center;
+        align-items : center;
+        flex-direction : column;
+        gap : 3rem;
+    }
+
+    .page #contributeTitle {
+        font-family: "Josefin Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        margin-left: 2rem;
+    }
+
+    .page:nth-child(1) h1 {
+        margin-left : 0;
+        font-size : 5rem;
+        transform : translateX(-90vw);
+        opacity : 0;
+        transition : all 0.8s ease-in-out;
+    }
+    #bgImage {
+        position : fixed;
+        top : 0;
+        left : 0;
+        height : 100vh;
+        width : 100vw;
+        background : url('https://www.ohm-advisors.com/sites/default/files/styles/1121x631/public/2019-01/adobestock_1453011972x.jpg?h=03b68ea9&itok=08zCAnjO');
+        background-size : cover;
+        background-blend-mode : overlay;
+        background-color : rgb(0, 0, 0, 0.5);
+        z-index : -1;
+    }
+    .page:nth-child(2) .text h2 {
+        margin : 0;
+        width : 90vw;
+    }
+
+    .page:nth-child(2) .text div {
+        margin : 0;
+        width : 70vw;
+    }
+
+    .page:nth-child(2) .text p {
+        width : 70vw;
+        margin-bottom : 5rem;
+    }
+
+    .page:nth-child(2) .text li {
+        margin : 4rem 0;
+        font-size : 1.5rem;
+        width : fit-content;
+    }
+
+    .innerPage {
+        height : 100vh;
+        width : 100vw;
+        display : flex;
+        align-items : center;
+        gap : 3rem;
+        justify-content : center;
+        flex-direction : column;
+    }
+
+    .page:nth-child(3) img {
+        width : 80vw;
+    }
+
+    .page:nth-child(3) .text {
+        width : 85vw;
+    }
+
+    #funds {
+        display : flex;
+        background : ;
+        width : 95vw;
+        height : 80vh;
+        gap : 0;
+    }
+
+    #fundsNav span p {
+        width : fit-content;
+        margin : 0;
+        font-size : 1.5rem;
+        transition : all 0.3s ease-in-out;
+        font-weight : bold;
+    }
+    .page:nth-child(5) img {
+        width : 80vw;
+    }
+
+    .page:nth-child(5) .text {
+        width : 85vw;
+    }
+
+    .page:nth-child(6) {
+        background : transparent;
+    }
+
+    .page:nth-child(6) p {
+        width : 90vw;
+        font-size : 2rem !important;
+        text-align : center;
+        line-height : 8rem;
+    }
+}
