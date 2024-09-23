@@ -1,16 +1,17 @@
-    <html lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>CityMotion</title>
     <link rel="stylesheet" href="../CSS/menu.css">
     <link rel="stylesheet" href="../CSS/commute.css">
     <link rel="icon" href="../IMAGES/logo.png">
+    <link rel="stylesheet" href="../CSS/mediaCommute.css">
     <!-- <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://rawgit.com/nathco/jQuery.scrollSpeed/master/jQuery.scrollSpeed.js"></script> -->
 </head>
 <body>
-    <img src="../ICONS/arrowUp.png" alt="">
+    <!-- <img src="../ICONS/arrowUp.png" alt=""> -->
     <div id = 'intro'>
         <div></div>
         <div></div>
@@ -40,15 +41,17 @@
     <div id = 'topPage'>
         <div id = 'header'><h1>COMMUTING</h1></div>
         <video id = 'topVideo' muted autoplay loop>
-            <source src = 'https://github.com/MGNub/CityMotion/raw/main/VIDEOS/roadsBG.mp4'>
+            <source src = '../VIDEOS/roadsBG.mp4'>
         </video>
         <video id = 'bikeVideo' muted autoplay loop>
-            <source src = 'https://github.com/MGNub/CityMotion/raw/main/VIDEOS/bikes.mp4'>
+            <source src = '../VIDEOS/bikes.mp4'>
         </video>
         <video id = 'transitVideo' muted autoplay loop>
-            <source src = 'https://github.com/MGNub/CityMotion/raw/main/VIDEOS/publicTransit.mp4'>
+            <source src = '../VIDEOS/publicTransit.mp4'>
         </video>
         <div id = 'overlay'></div>
+
+        <!-- <img src="../ICONS/scrollDown.png" alt=""> -->
     </div>
     <div id = 'pages'>
         <div id = 'page1'>
@@ -65,22 +68,42 @@
         <div id = 'page2'>
             <h2>Thoughts from Philadelphians</h2>
             <div class = 'row'>
-                <div class = 'card'>
-                    <p>“They come pretty often, lots of buses. It’s annoying when there’s detours and delays though. At least there are public buses to take, even though there are delays. Sometimes they come 30+ minutes late. Actually, if you think about it, the buses just got canceled, so it wasn’t late at all. So I went at 4, the 4:10 bus got canceled, the 4:20 bus got canceled, but the 4:30 bus came on time, so technically it was right on time.”</p>
-                    <p>- Mikey Huang</p>
+                <div class = 'cardContainer'>
+                    <div class = 'card'>MIKEY</div>
                 </div>
-                <div class = 'card'>
-                    <p>“I hate the smell of weed on the subway. I like the fact that you can use your phone to get on trains, even though it makes it feels like Big Brother is watching my every move.”</p>
-                    <p>- Erik Wiessmann</p>
+                <div class = 'cardContainer'>
+                    <div class = 'card'>ERIK WIESSMANN</div>
                 </div>
-            </div>
-            <div class = 'row'>
-                <div class = 'card'></div>
-                <div class = 'card'></div>
+                <!-- <div class = 'content'>
+                    <p class="description"></p>
+                    <a class="card" href="#!">
+                    <div class="front" style="background-image:url(https://www.nami.org/NAMI/media/NAMI-Media/BlogImageArchive/2022/AA_Blog.png)">
+                        <p> Mikey Huang </p>
+                    </div>
+                    <div class="back">
+                        <div>
+                        <p>“They come pretty often, lots of buses. It’s annoying when there’s detours and delays though. At least there are public buses to take, even though there are delays. Sometimes they come 30+ minutes late. Actually, if you think about it, the buses just got canceled, so it wasn’t late at all. So I went at 4, the 4:10 bus got canceled, the 4:20 bus got canceled, but the 4:30 bus came on time, so technically it was right on time.”</p>
+                        </div>
+                    </div> 
+                    </a>
+                </div>
+                <div class = 'content'>
+                    <p class="description"></p>
+                    <a class="card" href="#!">
+                    <div class="front" style="background-image:url(https://www.nami.org/NAMI/media/NAMI-Media/BlogImageArchive/2022/AA_Blog.png)">
+                        <p> Erik Wiessmann </p>
+                    </div>
+                    <div class="back">
+                        <div>
+                        <p>“I hate the smell of weed on the subway. I like the fact that you can use your phone to get on trains, even though it makes it feels like Big Brother is watching my every move.”</p>
+                        </div>
+                    </div> 
+                    </a>
+                </div> -->
             </div>
             <!-- <div id = 'page2Slide'>
                 <h1 id = 'page2Text'>BLACK TEXT</h1>
-                <img src="../IMAGES/poorBike.jpeg" alt="dangerous bike travel">
+                <img src="/IMAGES/poorBike.jpeg" alt="dangerous bike travel">
                 <div id = "page2Text">
                     <p>There is a lack of proper pedestrian and bike infrastructure in US cities. The lack of bike lanes and good sidewalks makes it dangerous to get to places by walking or cycling.</p>
                     <p>The prevalence of stroads furthermore emphasizes this problem, because of their lack of adequate sidewalks, crosswalks, and bike lanes, making them dangerous and unpleasant for pedestrians and cyclists.</p>
@@ -132,7 +155,7 @@
             </div>
             <div class = 'transitText'>
                 <h2>Conclusion</h2>
-                <p>All of these factors, from pedestrian and bike hostile roads, to slow public transportation services, deter people from commuting using these methods of transportation, leading more people to rely on cars, which in turn also reduces traffic.</p>
+                <p>All of these factors, from pedestrian and bike hostile roads, to slow public transportation services, deter people from commuting using these methods of transportation, leading more people to rely on cars, which in turn also increases traffic.</p>
             </div>
         </div>
         <footer>
@@ -150,7 +173,7 @@
         </footer>
     </div>
 <script src = '../JAVASCRIPT/menu.js'></script>
-<script src = '../JAVASCRIPT/commute.js'></script>
+<script src = '../JAVASCRIPT/commute2.js'></script>
 <script>
 </script>
 </body>
