@@ -7,7 +7,6 @@ menuBtn.addEventListener('click', menuExpand);
 
 menuBtn2.onclick = menuExpand;
 
-
 function menuExpand() {
     const titleText = document.getElementById('titleText');
 
@@ -30,10 +29,20 @@ function menuExpand() {
     menuBtn.style.display = 'none';
     titleText.classList.toggle('fade');
     logo.classList.toggle('rotate');
-    
+            
     setTimeout(menuBackground, 1100);
 }
 
 function menuBackground() {
     document.getElementById('menuBackground').classList.toggle('menuActive');
 }
+
+window.addEventListener('scroll', () => {
+    if(window.scrollY > 0) {
+        document.getElementById('title').classList.add('fade');
+        logo.classList.add('rotate');
+    } else {
+        document.getElementById('title').classList.remove('fade');
+        logo.classList.remove('rotate');
+    }
+})
