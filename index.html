@@ -1,11 +1,15 @@
 <html lang="en">
 <head>  
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>CityMotion</title>
     <link rel="stylesheet" href="CSS/home.css">
     <link rel="stylesheet" href="CSS/menu.css">
     <link rel = 'icon' href = 'IMAGES/logo.png'>
+    <link rel="stylesheet" href="CSS/mediaHome.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -41,24 +45,56 @@
     </div>
 
     <div id = 'pages'>
-        <div id = 'page1' class = 'page'>
+        <!-- <div id = 'page1' class = 'page'>
             <div id = 'introBox'>
                 <h2>Reinventing Cities</h2>
                 <p>Today, the country of America suffers from heavy carcentrism, leading to poor city infrastructure. The cities of America are designed for the car, built around the car, and bulldozed for the car.</p>
                 <button id = 'homeBtn'>LEARN MORE</button>
             </div>
-        </div>
+        </div> -->
+        <main>
+            <img draggable = 'false' src = 'parallaxIMG/background.jpg' data-distance = '800' class = ' background'>
+            <img draggable = 'false' src = 'parallaxIMG/bgCloud1.png' data-speedx = '0.01' data-speedy = '0.02' data-distance = '1050' class = 'parallax bgCloud-1'>
+            <img draggable = 'false' src = 'parallaxIMG/bgCloud2.png' data-speedx = '0.01' data-speedy = '0.02' data-distance = '1500' class = 'parallax bgCloud-2'>
+            <img draggable = 'false' src = 'parallaxIMG/bgCloud1.png' data-speedx = '0.01' data-speedy = '0.02' data-distance = '1500' class = 'parallax animateCloud-1'>
+            <img draggable = 'false' src = 'parallaxIMG/bgCloud2.png' data-speedx = '0.01' data-speedy = '0.02' data-distance = '1100' class = 'parallax animateCloud-2'>
+            <img draggable = 'false' src = 'parallaxIMG/backgroundCity.png' data-speedx = '0.01' data-speedy = '0.02' data-distance = '1300' class = 'parallax background-city'>
+            <img draggable = 'false' src = 'parallaxIMG/cloud2.png' data-speedx = '-0.04' data-speedy = '0.04' data-distance = '1200' class = 'parallax cloud-2'>
+            <img draggable = 'false' src = 'parallaxIMG/cloud1.png' data-speedx = '0.11' data-speedy = '0.08' data-distance = '1500' class = 'parallax cloud-1'>
+            <img draggable = 'false' src = 'parallaxIMG/cloud2.png' data-speedx = '-0.04' data-speedy = '0.04' data-distance = '1500' class = 'parallax cloud-3'>
+            <img draggable = 'false' src = "parallaxIMG/building2.1.png" data-speedx = '0.18' data-speedy = '0.07' data-distance = '1500' class = 'parallax building-2'>
+            <img draggable = 'false' src = 'parallaxIMG/fog4.png' data-speedx = '0.18' data-speedy = '0.07' data-distance = '1200' class = 'parallax fog fog1'>
+            <img draggable = 'false' src = 'parallaxIMG/fog4.png' data-speedx = '0.18' data-speedy = '0.07' data-distance = '1200' class = 'parallax fog fog2'>
+            <img draggable = 'false' src = 'parallaxIMG/fog4.png' data-speedx = '0.18' data-speedy = '0.07' data-distance = '1200' class = 'parallax fog fog3'>
+            
+            <img src = "parallaxIMG/building3.2.png" data-speedx = '-0.09' data-speedy = '0.07' data-distance = '1200' class = 'parallax building-3'>
+            <img src = "parallaxIMG/building1.png" data-speedx = '0.25' data-speedy = '0.1' data-distance = '2400' class = 'parallax building-1'>
+            <img src = 'parallaxIMG/sun_rays.png' data-speedx = '0.17' data-speedy = '0.14' data-distance = '-800' class = 'parallax sunrays-1'>
+            <img src = 'parallaxIMG/sun_rays.png' data-speedx = '0.17' data-speedy = '0.14' data-distance = '-800' class = 'parallax sunrays-2'>
+            <div id = 'parallaxTitleShadow' data-speedx = '0.08' data-speedy ='0.16' data-distance = '1200' class = 'parallax'>
+                <img draggable = 'false' class = 'cartoonBuilding' src = 'parallaxIMG/cartoonBuilding.png'><h2>CityMotion</h2>
+            </div>
+            <div id = 'parallaxTitle' data-speedx = '0.08' data-speedy ='0.16' data-distance = '1200' class = 'parallax'>
+                <img draggable = 'false' class = 'cartoonBuilding' src = 'IMAGES/logo.png'><h2>CityMotion</h2>
+            </div>
+            <button data-speedx = '0.08' data-speedy ='0.16' data-distance = '1200' id = 'descendBtn' class = 'parallax'><p>CLICK ME</p></button>
+            <div id = 'vignette'></div>
+            <img draggable = 'false' data-distance = '0' id = 'transitionClouds' src = 'parallaxIMG/transitionClouds.png'>
+
+        </main>
         <div class = 'fadeLines'></div>
         <div id = 'page2' class = 'page'></div>
         <div id = 'page3' class = 'page'>
 
             <div id = 'card1' class = 'card'>
-                <p id = 'text1'>There are many issues with American cities, and this website will dive more into the cars, roads, and transportation aspect of urban planning.</p>
+                <p id = 'text1'>There are many issues with American cities, and this website will dive more into the cars, roads, and transportation aspects of urban planning.</p>
             </div>
             <!--text-->
 
             <div id = 'card2' class = card></div>
-            <p id = 'text2'>The goal of this website is to advocate for, and promote advocacy for better and safer cities in America.</p>
+            <div id = 'text2'>
+                <p>The goal of this website is to advocate for, and promote advocacy for better and safer cities in America.</p>
+            </div>
 
         </div>
         <div class = 'stickyExpander'></div>
@@ -73,7 +109,7 @@
                     <a href = "HTML/road.html"><button onclick = 'btnClicked()'>Learn</button></a>
                 </div>
             </div>
-            <img src="/ICONS/projectAltF4.png" alt="">
+            <img src="ICONS/projectAltF4.png" alt="">
         </footer>
         <!-- <div id = 'page4' class = 'page'></div> -->
     </div>
@@ -88,8 +124,8 @@
         </div>
     </div> -->
 
-<script src = "JAVASCRIPT/home.js"></script>
+<script src = "https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src = "JAVASCRIPT/home2.js"></script>
 <script src = 'JAVASCRIPT/menu.js'></script>
 </body>
 </html>
-
