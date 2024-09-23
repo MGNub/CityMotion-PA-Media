@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
 :root {
     --bgColor : #27476e;
 }
@@ -111,7 +113,7 @@ body {
     position : sticky;
     background : var(--bgColor);
     top : 0;
-    padding-top: 10vh;
+    padding-top: 5vh;
     padding-bottom: 3vh;
     font-size : 16vh;
     margin-left : 3rem;
@@ -184,7 +186,7 @@ body {
 
 #page2 {
     padding-top : 20vh;
-    height : 150vh;
+    height : 100vh;
     width : 100vw;
     background : black;
     display : flex;
@@ -213,35 +215,120 @@ body {
     align-items : space-evenly;
 }
 
-#page2 .card {
-    background : rgb(43, 85, 95);
-    height : 350px;
-    width : 450px;
-    border-radius : 30px;
-    z-index : 1;
-    box-shadow : 0px 0px rgb(13, 32, 73);
-    transition : all 0.3s ease-in-out;
-    transform : translate(0, 0);
+body {
+    background : rgb(20, 20, 20);
+    color : white;
 }
 
-#page2 .card:hover {
-    transform : translate(-10px, -10px);
-    box-shadow : 10px 10px rgb(13, 32, 73);
+.cardContainer {
+    perspective : 1000px;
 }
 
-#page2 .card p:nth-child(1) {
-    margin : 20px;
-    font-size : 1.3rem;
+
+.card {
+    height : 50vh;
+    width : 50vh;
+    transition : all 1s ease-in-out;
+    transform-style : preserve-3d;
+    backface-visibility : hidden;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    text-align: center;
+    padding: 2rem;
+    font-size : 2rem;
 }
 
-#page2 .card p:nth-child(2) {
+.cardContainer:nth-child(1) .card {
+    background : url('https://media.timeout.com/images/103935618/image.jpg');
+    background-position: center;
+    background-size: cover;
+    background-blend-mode : overlay;
+    background-color : rgba(39, 71, 110, 0.313);
+}
+
+.cardContainer:nth-child(2) .card {
+    background : url('https://media.phillyvoice.com/media/images/21820-septa-countdown-clocks-mfl-b.2e16d0ba.fill-735x490.jpg');
+    background-position: center;
+    background-size: cover;
+    background-blend-mode : overlay;
+    background-color : rgba(39, 71, 110, 0.313);
+}
+
+
+.cardContainer:nth-child(1):hover .card {
+    transform : rotateY(-180deg);
+}
+
+.cardContainer:nth-child(2):hover .card {
+    transform : rotateY(180deg);
+}
+
+.card::before {
     position : absolute;
-    right : 0;
-    bottom : 0;
-    margin : 30px;
-    font-size : 1.5rem;
-    font-weight : bold;
+    height : 50vh;
+    width : 50vh;
+    z-index : -1;
+    transform : rotateY(180deg);
+    backface-visibility : hidden;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    text-align: center;
+    padding: 2rem;
+    color: white;
 }
+
+.cardContainer:nth-child(1) .card::before {
+    content : '“They come pretty often, lots of buses. It’s annoying when there’s detours and delays though. At least there are public buses to take, even though there are delays. Sometimes they come 30+ minutes late. Actually, if you think about it, the buses just got canceled, so it wasn’t late at all. So I went at 4, the 4:10 bus got canceled, the 4:20 bus got canceled, but the 4:30 bus came on time, so technically it was right on time.”';
+    background : url('https://media.timeout.com/images/103935618/image.jpg');
+    background-position: center;
+    background-size: cover;
+    background-blend-mode : overlay;
+    background-color : rgba(27, 57, 94, 1);
+    font-size: 1.3rem;
+}
+
+.cardContainer:nth-child(2) .card::before {
+    content : '“I hate the smell of weed on the subway. I like the fact that you can use your phone to get on trains, even though it makes it feels like Big Brother is watching my every move.”';
+    background : url('https://media.phillyvoice.com/media/images/21820-septa-countdown-clocks-mfl-b.2e16d0ba.fill-735x490.jpg');
+    background-position: center;
+    background-size: cover;
+    background-blend-mode : overlay;
+    background-color : rgba(27, 57, 94, 1);
+    font-size: 1.3rem;
+}
+
+/* 
+    #page2 .card {
+        background : rgb(43, 85, 95);
+        height : 350px;
+        width : 450px;
+        border-radius : 30px;
+        z-index : 1;
+        box-shadow : 0px 0px rgb(13, 32, 73);
+        transition : all 0.3s ease-in-out;
+        transform : translate(0, 0);
+    }
+
+    #page2 .card:hover {
+        transform : translate(-10px, -10px);
+        box-shadow : 10px 10px rgb(13, 32, 73);
+    }
+
+    #page2 .card p:nth-child(1) {
+        margin : 20px;
+        font-size : 1.3rem;
+    }
+
+    #page2 .card p:nth-child(2) {
+        position : absolute;
+        right : 0;
+        bottom : 0;
+        margin : 30px;
+        font-size : 1.5rem;
+        font-weight : bold;
+    } */
 
 
 /* #page2 .card::before:hover {
@@ -345,8 +432,8 @@ body {
     /* font-family : Arial, Helvetica, sans-serif; */
     font-size : 18rem;
     /* font-weight : bold; */
-    text-shadow : 25px 0px rgb(35, 52, 83);
-    font-family: "Josefin Sans", sans-serif;
+    text-shadow : 32px 0px rgb(35, 52, 83);
+    font-family: "Karla", sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;
     font-style: normal;
@@ -356,7 +443,7 @@ body {
 #bike2 h1::before {
     content : 'WALK';
     position : absolute;
-    transform : translate(-8rem, -8rem);
+    transform : translate(-8rem, -9rem);
     color : rgb(73, 101, 192);
     z-index : -1;
     /*slide from left*/
@@ -365,7 +452,7 @@ body {
 #bike2 h1::after {
     content : 'RUN';
     position : absolute;
-    transform : translate(calc(-100% + 6rem), 8rem);
+    transform : translate(calc(-100% + 6rem), 9rem);
     color : rgb(82, 34, 130); /*rgb(61, 12, 97);*/
     /*slide/come from above*/
 }
@@ -402,7 +489,7 @@ body {
 }
 
 .bike .text p {
-    font-size : 1.5rem;
+    font-size : 1.4rem;
     font-family: "Spectral", serif;
     font-weight: 300;
     font-style: normal;
@@ -422,7 +509,7 @@ body {
     background : rgb(0, 0, 0, 0.3);
     z-index : -1;
     rotate : 45deg;
-    box-shadow : -720px 200px rgb(0, 0, 0, 0.3), -480px 200px rgb(0, 0, 0, 0.3), -240px 0px rgb(0, 0, 0, 0.3), 240px -100px rgb(0, 0, 0, 0.3), 480px -100px rgb(0, 0, 0, 0.3), 720px -400px rgb(0, 0, 0, 0.3), 960px -800px rgb(0, 0, 0, 0.3);
+    box-shadow :-720px 240px rgb(0, 0, 0, 0.3), -480px 240px rgb(0, 0, 0, 0.3), -240px 240px rgb(0, 0, 0, 0.3), 240px -100px rgb(0, 0, 0, 0.3), 480px -100px rgb(0, 0, 0, 0.3), 720px -400px rgb(0, 0, 0, 0.3), 960px -800px rgb(0, 0, 0, 0.3);
 }
 
 /*scroll progress*/
@@ -458,6 +545,7 @@ body {
     background : rgb(218, 218, 218);
     transition : all 0.3s ease-in-out;
     cursor : pointer;
+    
 }
 
 /*page4*/
@@ -467,21 +555,23 @@ body {
     height : 110vh;
     width : 100vw;
     display : flex;
-    align-items : center
+    align-items : center;
+    z-index : 5;
+}
+    
 #page4 h1 {
-    font-size : 150rem;
-    text-align : right;
-    margin : 0;
-    font-size : 10rem;
-    animation : textPopIn 1.5s ease-in-out;
+    margin-top: 80px;
+    margin-left: 300px;
+    font-size : 11rem;
     font-family: "Josefin Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
-    font-style: italic;    
-}t;
+    font-style: italic;
 }
 
-/*page5*/
+/* 
+
+/*p */
 
 #page5 {
     position : relative;
@@ -503,77 +593,25 @@ body {
     font-size : 2.5rem;
     width : 65vw;
     text-align : center;
-    text-shadow : 3px 3px 5px black, -3px -3px 5px black;
+    /* text-shadow : 3px 3px 5px black, -3px -3px 5px black; */
+}
+
+#page5 .transitText h2 {
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+#page5 .transitText p {
+    font-family: "Spectral", serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .textHidden {
     opacity : 0;
     transform : translateY(-10%);
-}
-
-/*footer*/
-
-footer {
-    background : rgb(20, 20, 20, 0.9);
-    position : absolute;
-    bottom : 0;
-    height : 100vh;
-    width : 100vw;
-}
-
-footer img {
-    position : absolute;
-    bottom : 0;
-    height : 12vh;
-    margin : 20px;
-}
-
-footer #container {
-    position : absolute;
-    top : 50vh;
-    left : 50vw;
-    transform : translate(-50%, -40%);
-    width : 60vw;
-    display : flex;
-    justify-content : center;
-    align-items : center;
-}
-
-footer #overview {
-    flex : 1;
-    border-right : 1px solid white;
-    padding : 2rem 0;
-}
-
-footer #overview p {
-    width : 80%;
-    font-size : 1.3rem;
-}
-
-footer #btn {
-    display : flex;
-    flex-direction : column;
-    align-items : center;
-    font-size : 2rem;
-    text-align : center;
-    flex : 2;
-}
-
-footer #btn button {
-    background : transparent;
-    height : 75px;
-    width : 225px;
-    border-radius : 50px;
-    border : solid 2px white;
-    color : white;
-    transition : all 0.5s ease-in-out;
-    font-size : 0.8rem;
-}
-
-footer #btn button:hover {
-    background : white;
-    color : black;
-    border : solid 2px black;
 }
 
 /*animations*/
