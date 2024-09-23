@@ -21,7 +21,7 @@ function parallax() {
     const trafficImg = document.getElementById('trafficImg');
     const bikeHorizontal = document.getElementById('bikeHorizontal');
 
-    console.log(window.scrollY);
+    // console.log(window.scrollY);
     
     if(window.scrollY > 0) {
         document.getElementById('title').classList.add('fade');
@@ -149,12 +149,11 @@ function parallax() {
         }
     }
     //transitText
-    const texts = document.getElementsByClassName('transitText');
-
+    
     if (screen.width > 600) {
-        fadeScroll(0, 30);
-        fadeScroll(1, 28);
-        fadeScroll(2, 26);
+        fadeScroll(0, 0);
+        fadeScroll(1, 1.75);
+        fadeScroll(2, 3.5);
     } else {
         fadeScroll(0, 50);
         fadeScroll(1, 45);
@@ -162,9 +161,29 @@ function parallax() {
     }
     
     function fadeScroll(index, init) {
-        texts[index].style.opacity = window.innerHeight / init - window.pageYOffset / 550;
+        texts[index].style.opacity = 21.1 - ((window.pageYOffset / maxOffset(offset[index])) * 20);
+
+
+        // function slowOffset(after) {
+        //     if (window.pageYOffset > after) {
+        //         return window.pageYOffset / 50;
+        //     }
+        //     return (offset[index] * -1) - wa;
+        // }
+    }
+    console.log(12 - ((window.pageYOffset / maxOffset(offset[0])) * 11));
+
+    function maxOffset(maximum) {
+        if(window.pageYOffset > maximum) {
+            return maximum;
+        }
+        return window.pageYOffset;
     }
 }
+
+const bodyOffset = document.body.getBoundingClientRect().top;
+const texts = document.getElementsByClassName('transitText');
+const offset = [texts[0].getBoundingClientRect().top - bodyOffset, texts[1].getBoundingClientRect().top - bodyOffset, texts[2].getBoundingClientRect().top - bodyOffset];
 
 function bikeToggle() {
     const bikeText = document.querySelector('.bike:nth-child(3) .text');
